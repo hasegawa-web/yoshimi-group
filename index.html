@@ -1,88 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>吉見グループ株式会社</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <video class="bg-video" autoplay muted loop playsinline>
-    <source src="movie/main.mp4" type="video/mp4">
-  </video>
-  <header>
-    <h1 class="head__logo">
-      <img src="images/common/logo-blue.svg" alt="吉見グループ株式会社" class="head__logo-img">
-    </h1>
-    <nav class="gnav">
-      <ul class="gnavList">
-        <li class="gnavList__content">
-          <a href="" class="gnavList__link">吉見グループについて</a>
-        </li>
-        <li class="gnavList__content">
-          <a href="" class="gnavList__link">事業とグループ企業</a>
-        </li>
-        <li class="gnavList__content">
-          <a href="" class="gnavList__link">企業情報</a>
-        </li>
-        <li class="gnavList__content">
-          <a href="" class="gnavList__link">地域の皆様へ</a>
-        </li>
-        <li class="gnavList__content">
-          <a href="" class="gnavList__link">お問い合わせ</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="gradient-bg">
-      <section class="hero">
-        <svg class="hero__path-text" aria-hidden="true">
-          <path id="heroSloganBg" class="hero__path-text-bg" fill="#ffffff" />
-          <path id="heroSloganPath" fill="none" />
-          <text id="heroSloganText">
-            <textPath id="heroSloganTextPath" href="#heroSloganPath" startOffset="0"></textPath>
-          </text>
-        </svg>
-        <p class="hero__title">つなぐ力が、<br>
-          未来を動かす。</p>
-        <p class="hero__catch">物流を中核に、多様な事業を通じて<br>豊かな地域社会づくりに貢献します。</p>
-        <canvas id="c"></canvas>
-      </section>
-      <section class="top-about">
-      
-      </section>
-    </div>
-  </main>
-
-  <footer class="footer" id="contact">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <p class="footer__slogan">Connecting People.<br>Moving the Future.</p>
-        <p class="footer__catch">つなぐ力が、未来を動かす。</p>
-        <img src="images/common/logo-white.svg" alt="吉見グループ株式会社" class="footer__logo" width="341" height="49">
-        <p class="footer__address">〒360-0024　埼玉県熊谷市問屋町2-4-18　ソシオ熊谷情報センタービル5F<br>TEL:048-528-3300　FAX:048-528-3302</p>
-      </div>
-      <nav class="footer__nav" aria-label="フッターナビゲーション">
-        <ul>
-          <li><a href="#about">吉見グループについて</a></li>
-          <li><a href="#business">事業とグループ企業</a></li>
-          <li><a href="#company">企業情報</a></li>
-          <li><a href="#community">地域の皆様へ</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-          <li><a href="#">プライバシーポリシー</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>吉見グループ株式会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="movie/main.mp4" type="video/mp4" />
+    </video>
+    <header>
+      <h1 class="head__logo">
+        <img
+          src="images/common/logo-blue.svg"
+          alt="吉見グループ株式会社"
+          class="head__logo-img"
+        />
+      </h1>
+      <nav class="gnav">
+        <ul class="gnavList">
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">吉見グループについて</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">事業とグループ企業</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">企業情報</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">地域の皆様へ</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">お問い合わせ</a>
+          </li>
         </ul>
       </nav>
-    </div>
-    <p class="footer__copy">Copyright © 吉見グループ株式会社. All Rights Reserved.</p>
-  </footer>
-  <a href="#" class="fixBnr">
-    <img src="images/common/bnr_100th.svg" alt="100周年記念" class="fixBnr__img">
-  </a>
-  <script src="js/main_circle.js"></script>
-  <script src="js/hero_path_text.js"></script>
-</body>
+    </header>
+    <main>
+      <div class="gradient-bg">
+        <section class="hero">
+          <svg class="hero__path-text" aria-hidden="true">
+            <path id="heroSloganBg" class="hero__path-text-bg" fill="#ffffff" />
+            <path id="heroSloganPath" fill="none" />
+            <text id="heroSloganText">
+              <textPath
+                id="heroSloganTextPath"
+                href="#heroSloganPath"
+                startOffset="0"
+              ></textPath>
+            </text>
+          </svg>
+          <p class="hero__title">
+            つなぐ力が、<br />
+            未来を動かす。
+          </p>
+          <p class="hero__catch">
+            物流を中核に、多様な事業を通じて<br />豊かな地域社会づくりに貢献します。
+          </p>
+          <canvas id="c"></canvas>
+        </section>
+        <section class="top-about">
+          <div class="top-about__inner">
+            <div class="top-about__content">
+              <h2 class="top-about__title">
+                地域とともに、
+                <br />
+                新たな価値を創造する。
+              </h2>
+              <p class="top-about__text">
+                吉見グループは、物流事業を中核に、人材サービス・不動産・パレット製造など多様な事業を展開しています。培ってきた信頼とグループの総合力を活かし、地域社会とともに歩みながら、新たな価値を創造し、持続的な発展に貢献してまいります。
+              </p>
+              <div class="btnList">
+                <a href="" class="btn-white">
+                  <span class="btn-white__text">吉見グループについて</span>
+                </a>
+                <a href="" class="btn-white">
+                  <span class="btn-white__text">グループ会社紹介</span>
+                </a>
+              </div>
+            </div>
+            <img
+              src="images/common/group_img.svg"
+              alt="吉見グループの事業"
+              class="top-about__img"
+            />
+          </div>
+          <ul class="top-aboutList">
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/yoshimi-group.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/yoshimi-shoji.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/yamaichi.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/yoshimifoods.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/skillplaza.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/yasuuemon.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/asentrust.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+            <li class="top-aboutList__item">
+              <img
+                src="images/common/group/sanei.svg"
+                alt="吉見グループ"
+                class="top-aboutList__img"
+              />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__slogan">
+            Connecting People.<br />Moving the Future.
+          </p>
+          <p class="footer__catch">つなぐ力が、未来を動かす。</p>
+          <img
+            src="images/common/logo-white.svg"
+            alt="吉見グループ株式会社"
+            class="footer__logo"
+            width="341"
+            height="49"
+          />
+          <p class="footer__address">
+            〒360-0024　埼玉県熊谷市問屋町2-4-18　ソシオ熊谷情報センタービル5F<br />TEL:048-528-3300　FAX:048-528-3302
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <ul>
+            <li><a href="#about">吉見グループについて</a></li>
+            <li><a href="#business">事業とグループ企業</a></li>
+            <li><a href="#company">企業情報</a></li>
+            <li><a href="#community">地域の皆様へ</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer__copy">
+        Copyright © 吉見グループ株式会社. All Rights Reserved.
+      </p>
+    </footer>
+    <a href="#" class="fixBnr">
+      <img
+        src="images/common/bnr_100th.svg"
+        alt="100周年記念"
+        class="fixBnr__img"
+      />
+    </a>
+    <script src="js/main_circle.js"></script>
+    <script src="js/hero_path_text.js"></script>
+  </body>
 </html>
