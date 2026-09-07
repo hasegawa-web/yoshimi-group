@@ -93,64 +93,114 @@
               class="top-about__img"
             />
           </div>
-          <ul class="top-aboutList">
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/yoshimi-group.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/yoshimi-shoji.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/yamaichi.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/yoshimifoods.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/skillplaza.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/yasuuemon.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/asentrust.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-            <li class="top-aboutList__item">
-              <img
-                src="images/common/group/sanei.svg"
-                alt="吉見グループ"
-                class="top-aboutList__img"
-              />
-            </li>
-          </ul>
+          <div class="top-aboutList-wrap">
+            <ul class="top-aboutList" id="topAboutList">
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yoshimi-group"
+                >
+                  <img
+                    src="images/common/group/yoshimi-group.svg"
+                    alt="吉見グループ株式会社"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yoshimi-shoji"
+                >
+                  <img
+                    src="images/common/group/yoshimi-shoji.svg"
+                    alt="吉見商事株式会社"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yamaichi"
+                >
+                  <img
+                    src="images/common/group/yamaichi.svg"
+                    alt="株式会社ヤマイチ"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yoshimifoods"
+                >
+                  <img
+                    src="images/common/group/yoshimifoods.svg"
+                    alt="株式会社ヨシミフーズ"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="skillplaza"
+                >
+                  <img
+                    src="images/common/group/skillplaza.svg"
+                    alt="株式会社スキルプラザ"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yasuuemon"
+                >
+                  <img
+                    src="images/common/group/yasuuemon.svg"
+                    alt="株式会社松本安右衛門商店"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="asentrust"
+                >
+                  <img
+                    src="images/common/group/asentrust.svg"
+                    alt="株式会社アゼントラスト"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="sanei"
+                >
+                  <img
+                    src="images/common/group/sanei.svg"
+                    alt="三栄実業株式会社"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </main>
@@ -195,7 +245,40 @@
         class="fixBnr__img"
       />
     </a>
+    <dialog
+      class="company-modal"
+      id="companyModal"
+      aria-labelledby="companyModalTitle"
+    >
+      <div class="company-modal__panel">
+        <button
+          type="button"
+          class="company-modal__close"
+          id="companyModalClose"
+          aria-label="閉じる"
+        ></button>
+        <div class="company-modal__logo">
+          <img id="companyModalLogo" alt="" />
+        </div>
+        <div class="company-modal__body">
+          <p class="company-modal__category" id="companyModalCategory"></p>
+          <h3 class="company-modal__name" id="companyModalTitle"></h3>
+          <p class="company-modal__desc">
+            <span id="companyModalDesc"></span>
+          </p>
+          <a
+            class="btn-blue"
+            id="companyModalLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="btn-blue__text">公式ウェブサイト</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
     <script src="js/main_circle.js"></script>
     <script src="js/hero_path_text.js"></script>
+    <script src="js/company_modal.js"></script>
   </body>
 </html>
