@@ -1,5 +1,5 @@
-const canvas = document.getElementById('c');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
 let W, H, DPR;
 
 function resize() {
@@ -8,20 +8,20 @@ function resize() {
   H = window.innerHeight;
   canvas.width = W * DPR;
   canvas.height = H * DPR;
-  canvas.style.width = W + 'px';
-  canvas.style.height = H + 'px';
+  canvas.style.width = W + "px";
+  canvas.style.height = H + "px";
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 }
-window.addEventListener('resize', resize);
+window.addEventListener("resize", resize);
 resize();
 
 function makeCluster(seed) {
   return {
     baseX: seed.x,
     baseY: seed.y,
-    radius: seed.radius,   // shared radius for all ellipses
-    aspect: seed.aspect,   // ry / rx, <1 makes a flatter ellipse
-    opacity: seed.opacity
+    radius: seed.radius, // shared radius for all ellipses
+    aspect: seed.aspect, // ry / rx, <1 makes a flatter ellipse
+    opacity: seed.opacity,
   };
 }
 
@@ -32,23 +32,23 @@ function makeCluster(seed) {
 // The whole group is also rotated 90° from its original layout.
 // dx/dy shift the center (in px); rotation is in radians.
 // These never change over time: only the orbiting dots move.
-const DEG3 = 3 * Math.PI / 180;
+const DEG3 = (3 * Math.PI) / 180;
 const GROUP_ROTATION = Math.PI / 2; // rotate the whole cluster 90°
 const ellipseLayout = [
   { dx: -24, dy: -14, rotation: -0.15 - DEG3 * 2 + GROUP_ROTATION },
-  { dx: -10, dy:  -6, rotation: -0.15 - DEG3 * 1 + GROUP_ROTATION },
-  { dx:   0, dy:   0, rotation: -0.15 + GROUP_ROTATION },
-  { dx:  10, dy:   6, rotation: -0.15 + DEG3 * 1 + GROUP_ROTATION },
-  { dx:  22, dy:  13, rotation: -0.15 + DEG3 * 2 + GROUP_ROTATION },
-].map(l => ({
+  { dx: -10, dy: -6, rotation: -0.15 - DEG3 * 1 + GROUP_ROTATION },
+  { dx: 0, dy: 0, rotation: -0.15 + GROUP_ROTATION },
+  { dx: 10, dy: 6, rotation: -0.15 + DEG3 * 1 + GROUP_ROTATION },
+  { dx: 22, dy: 13, rotation: -0.15 + DEG3 * 2 + GROUP_ROTATION },
+].map((l) => ({
   // rotate each ellipse's center offset by the same 90°
   dx: l.dx * Math.cos(GROUP_ROTATION) - l.dy * Math.sin(GROUP_ROTATION),
   dy: l.dx * Math.sin(GROUP_ROTATION) + l.dy * Math.cos(GROUP_ROTATION),
-  rotation: l.rotation
+  rotation: l.rotation,
 }));
 
 const clusters = [
-  makeCluster({ x: 0.50, y: 0.46, radius: 310, aspect: 0.62, opacity: 0.5 }),
+  makeCluster({ x: 0.5, y: 0.46, radius: 220, aspect: 0.62, opacity: 0.5 }),
 ];
 
 // The whole set sways together as one rigid shape — a single
@@ -60,15 +60,15 @@ const clusters = [
 // Because it's driven by one sin(phase), it always returns to
 // exactly 0 — and the base layout — once per full cycle.
 const LOOP_PERIOD_MS = 18000; // one full cycle, in milliseconds
-const MAX_SWAY = 40 * Math.PI / 180; // how far the group swings, in radians
+const MAX_SWAY = (40 * Math.PI) / 180; // how far the group swings, in radians
 
 function draw(t) {
   ctx.clearRect(0, 0, W, H);
 
-  const phase = (t % LOOP_PERIOD_MS) / LOOP_PERIOD_MS * Math.PI * 2;
+  const phase = ((t % LOOP_PERIOD_MS) / LOOP_PERIOD_MS) * Math.PI * 2;
   const sway = Math.sin(phase); // -1..1, single shared driver
 
-  clusters.forEach(cl => {
+  clusters.forEach((cl) => {
     const cx = cl.baseX * W;
     const cy = cl.baseY * H;
     const rx = cl.radius;
@@ -100,7 +100,7 @@ function draw(t) {
       // Direction and speed alternate per ellipse so dots don't
       // all line up, like small bodies on independent orbits.
       const dir = i % 2 === 0 ? 1 : -1;
-      const orbitSpeed = 0.00045 * dir / (1 + (i % 3) * 0.3);
+      const orbitSpeed = (0.00045 * dir) / (1 + (i % 3) * 0.3);
       const angle = t * orbitSpeed + i * 1.7;
 
       const dx = Math.cos(angle) * rx;
