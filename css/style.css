@@ -1030,11 +1030,58 @@ header {
 }
 
 .top-sastainability {
+  --sastain-arc-r: 190.65vw;
+  --sastain-arc-cx: 69.74vw;
+  --sastain-arc-drop: 164.14vw;
+  --sastain-line-r: 188.33vw;
+  --sastain-line-cx: 65.86vw;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--color-white);
+  padding: 220px 0 300px;
+}
+
+.top-sastainability__line {
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--sastain-line-cx) - var(--sastain-line-r));
+  z-index: 0;
+  width: calc(var(--sastain-line-r) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #77aed6;
+  pointer-events: none;
+}
+
+.top-sastainability::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--sastain-arc-cx) - var(--sastain-arc-r));
+  z-index: 1;
+  width: calc(var(--sastain-arc-r) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
   background-color: var(--color-bland-light);
-  padding: 220px 0;
+  pointer-events: none;
+}
+
+.top-sastainability::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: var(--sastain-arc-drop);
+  z-index: 1;
+  background-color: var(--color-bland-light);
+  pointer-events: none;
 }
 
 .top-sastainability__inner {
+  position: relative;
+  z-index: 2;
   margin-left: calc(50% + 200px);
 }
 
