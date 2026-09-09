@@ -159,6 +159,7 @@ i {
 :root {
   --color-brand: #326698;
   --color-brand-dark: #053e69;
+  --color-bland-light: #EAF4FE;
   --color-text: #242424;
   --color-white: #ffffff;
   --font-en: "Figtree", sans-serif;
@@ -180,6 +181,7 @@ body {
   height: 100%;
   max-width: none;
   object-fit: cover;
+  object-position: top;
 }
 
 /* ========================================
@@ -416,6 +418,8 @@ header {
     rgba(68, 139, 172, 1) 52%,
     rgba(50, 102, 152, 1) 100%
   );
+  overflow: hidden;
+  position: relative;
 }
 
 .hero {
@@ -494,9 +498,8 @@ header {
 }
 
 .top-about {
-  padding-bottom: 300px;
+  padding-bottom: 100px;
   position: relative;
-  overflow: hidden;
 }
 
 .top-about__inner {
@@ -589,12 +592,12 @@ header {
   z-index: 2;
 }
 
-.top-about__yoshimi-circle {
+.gradient-bg__yoshimi-circle {
   position: absolute;
   bottom: 0;
   right: 0;
   left: calc(50% - 100px);
-  bottom: -300px;
+  top: calc(100dvh + 400px);
   z-index: 1;
   animation: top-about-yoshimi-circle 60s linear infinite;
 }
@@ -642,6 +645,7 @@ header {
     max-height: 56px;
   }
 }
+
 
 /* ========================================
   Company modal
@@ -875,10 +879,57 @@ header {
 }
 
 .top-inNumbers {
+  --innumbers-arc-r: 136.65vw;
+  --innumbers-arc-cx: 30.26vw;
+  --innumbers-arc-drop: 19.14vw;
+  --innumbers-line-r: 157.33vw;
+  --innumbers-line-cx: 31.14vw;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.top-inNumbers__line {
+  position: absolute;
+  top: 0;
+  left: calc(var(--innumbers-line-cx) - var(--innumbers-line-r));
+  z-index: 0;
+  width: calc(var(--innumbers-line-r) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #77aed6;
+  pointer-events: none;
+}
+
+.top-inNumbers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(var(--innumbers-arc-cx) - var(--innumbers-arc-r));
+  z-index: 1;
+  width: calc(var(--innumbers-arc-r) * 2);
+  aspect-ratio: 1;
+  border-radius: 50%;
   background-color: var(--color-white);
+  pointer-events: none;
+}
+
+.top-inNumbers::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--innumbers-arc-drop);
+  bottom: 0;
+  z-index: 1;
+  background-color: var(--color-white);
+  pointer-events: none;
 }
 
 .top-inNumbers__inner {
+  position: relative;
+  z-index: 2;
   max-width: 1400px;
   width: 92%;
   margin-inline: auto;
@@ -976,6 +1027,20 @@ header {
   line-height: 1.6em;
   color: var(--color-brand);
   text-align: center;
+}
+
+.top-sastainability {
+  background-color: var(--color-bland-light);
+  padding: 220px 0;
+}
+
+.top-sastainability__inner {
+  margin-left: calc(50% + 200px);
+}
+
+
+.top-sastainability__text {
+  margin-bottom: 30px;
 }
 
 /* ========================================
