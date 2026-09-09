@@ -1096,6 +1096,7 @@ header {
   position: absolute;
   top: -200px;
   left: calc(50% - 800px);
+  overflow: hidden;
   transform: rotate(-10deg);
   z-index: 2;
 }
@@ -1106,12 +1107,48 @@ header {
   gap: 20px;
 }
 
+.top-sastainabilityList.is-ready {
+  animation: sastain-marquee-up 40s linear infinite;
+}
+
+.top-sastainabilityList--down.is-ready {
+  animation-name: sastain-marquee-down;
+}
+
+.top-sastainabilityList__item {
+  flex-shrink: 0;
+}
+
 .top-sastainabilityList__img {
    width: 320px;
    height: 222px;
    border-radius: 20px;
    object-fit: cover;
    object-position: center;
+}
+
+@keyframes sastain-marquee-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-1 * var(--marquee-distance)));
+  }
+}
+
+@keyframes sastain-marquee-down {
+  from {
+    transform: translateY(calc(-1 * var(--marquee-distance)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-sastainabilityList.is-ready {
+    animation: none !important;
+  }
 }
 
 /* ========================================
