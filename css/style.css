@@ -1162,6 +1162,36 @@ header {
   }
 }
 
+.top-company {
+  background-color: var(--color-white);
+  padding: 130px 0 160px;
+}
+
+.top-company__inner {
+  max-width: 1400px;
+  width: 92%;
+  margin-inline: auto;
+}
+
+.top-company .top-h2 {
+  margin-inline: 100px;
+}
+
+.top-company__content {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-bland-light);
+  border-radius: 20px;
+  padding: 40px 100px;
+
+}
+
+.top-companyList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
 /* ========================================
   Footer
   ======================================== */
