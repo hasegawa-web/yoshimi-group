@@ -1090,6 +1090,30 @@ header {
   margin-bottom: 30px;
 }
 
+.top-sastainabilityList__wrap {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: -200px;
+  left: calc(50% - 800px);
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+.top-sastainabilityList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-sastainabilityList__img {
+   width: 320px;
+   height: 222px;
+   border-radius: 20px;
+   object-fit: cover;
+   object-position: center;
+}
+
 /* ========================================
   Footer
   ======================================== */
