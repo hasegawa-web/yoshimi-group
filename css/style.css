@@ -1039,7 +1039,7 @@ header {
   z-index: 1;
   overflow: hidden;
   background-color: var(--color-white);
-  padding: 220px 0 300px;
+  padding: 220px 0 150px;
 }
 
 .top-sastainability__line {
@@ -1088,6 +1088,17 @@ header {
 
 .top-sastainability__text {
   margin-bottom: 30px;
+}
+
+.top-sastainabilityList__mask {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  clip-path: circle(
+    var(--sastain-arc-r) at var(--sastain-arc-cx)
+      calc(100% - var(--sastain-arc-r))
+  );
 }
 
 .top-sastainabilityList__wrap {
