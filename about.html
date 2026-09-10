@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>吉見グループ株式会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="movie/main.mp4" type="video/mp4" />
+    </video>
+    <header>
+      <h1 class="head__logo">
+        <img
+          src="images/common/logo-blue.svg"
+          alt="吉見グループ株式会社"
+          class="head__logo-img"
+        />
+      </h1>
+      <nav class="gnav">
+        <ul class="gnavList">
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">吉見グループについて</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">事業とグループ企業</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">企業情報</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">地域の皆様へ</a>
+          </li>
+          <li class="gnavList__content">
+            <a href="" class="gnavList__link">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="gradient-bg">
+        <section class="hero">
+          <svg class="hero__path-text" aria-hidden="true">
+            <path id="heroSloganBg" class="hero__path-text-bg" fill="#ffffff" />
+            <path id="heroSloganPath" fill="none" />
+            <text id="heroSloganText">
+              <textPath
+                id="heroSloganTextPath"
+                href="#heroSloganPath"
+                startOffset="0"
+              ></textPath>
+            </text>
+          </svg>
+          <p class="hero__title">
+            つなぐ力が、<br />
+            未来を動かす。
+          </p>
+          <p class="hero__catch">
+            物流を中核に、多様な事業を通じて<br />豊かな地域社会づくりに貢献します。
+          </p>
+          <canvas id="c"></canvas>
+        </section>
+        <section class="top-about">
+          <div class="top-about__inner">
+            <div class="top-about__content">
+              <h2 class="top-about__title">
+                地域とともに、
+                <br />
+                新たな価値を創造する。
+              </h2>
+              <p class="top-about__text">
+                吉見グループは、物流事業を中核に、人材サービス・不動産・パレット製造など多様な事業を展開しています。培ってきた信頼とグループの総合力を活かし、地域社会とともに歩みながら、新たな価値を創造し、持続的な発展に貢献してまいります。
+              </p>
+              <div class="btnList">
+                <a href="" class="btn--white">
+                  <span class="btn--white__text">吉見グループについて</span>
+                </a>
+                <a href="" class="btn--white">
+                  <span class="btn--white__text">グループ会社紹介</span>
+                </a>
+              </div>
+            </div>
+            <img
+              src="images/common/group_img.svg"
+              alt="吉見グループの事業"
+              class="top-about__img"
+            />
+          </div>
+          <div class="top-aboutList-wrap">
+            <ul class="top-aboutList" id="topAboutList">
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yoshimi-group"
+                >
+                  <img
+                    src="images/common/group/yoshimi-group.svg"
+                    alt="吉見グループ株式会社"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yoshimi-shoji"
+                >
+                  <img
+                    src="images/common/group/yoshimi-shoji.svg"
+                    alt="吉見商事株式会社"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yamaichi"
+                >
+                  <img
+                    src="images/common/group/yamaichi.svg"
+                    alt="株式会社ヤマイチ"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yoshimifoods"
+                >
+                  <img
+                    src="images/common/group/yoshimifoods.svg"
+                    alt="株式会社ヨシミフーズ"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="skillplaza"
+                >
+                  <img
+                    src="images/common/group/skillplaza.svg"
+                    alt="株式会社スキルプラザ"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="yasuuemon"
+                >
+                  <img
+                    src="images/common/group/yasuuemon.svg"
+                    alt="株式会社松本安右衛門商店"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="asentrust"
+                >
+                  <img
+                    src="images/common/group/asentrust.svg"
+                    alt="株式会社アゼントラスト"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+              <li class="top-aboutList__item">
+                <button
+                  type="button"
+                  class="top-aboutList__btn"
+                  data-company="sanei"
+                >
+                  <img
+                    src="images/common/group/sanei.svg"
+                    alt="三栄実業株式会社"
+                    class="top-aboutList__img"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="top-inNumbers">
+          <div class="top-inNumbers__line" aria-hidden="true"></div>
+          <div class="top-inNumbers__inner">
+            <h2 class="top-h2">
+              <p class="top-h2--en">In Numbers</p>
+              <p class="top-h2--ja">数字で見る吉見グループ</p>
+            </h2>
+            <ul class="top-inNumbersList">
+              <li class="top-inNumbersList__item">
+                <h3 class="top-inNumbersList__title">創業年数</h3>
+                <p class="top-inNumbersList__text"><span class="top-inNumbersList__number">102</span>年</p>
+                <aside class="top-inNumbersList__aside">
+                  大正13年の創業以来、100年以上にわたり<br>
+                    信頼と実績を積み重ねてきました。
+                </aside>
+              </li>
+              <li class="top-inNumbersList__item">
+                <h3 class="top-inNumbersList__title">グループ会社数</h3>
+                <p class="top-inNumbersList__text"><span class="top-inNumbersList__number">10</span>社</p>
+              </li>
+              <li class="top-inNumbersList__item">
+                <h3 class="top-inNumbersList__title">従業員数</h3>
+                <p class="top-inNumbersList__text"><span class="top-inNumbersList__number">1,024</span>名</p>
+                <aside class="top-inNumbersList__aside">
+                  （グループ全体）
+                </aside>
+              </li>
+            </ul>
+            <a href="" class="anchorBtn--blue">詳しく見る</a>
+          </div>
+        </section>
+        <img src="images/top/yoshimi_circle.svg" alt="YOSHIMI GROUP" class="gradient-bg__yoshimi-circle">
+      </div>
+      <section class="top-sastainability">
+        <div class="top-sastainability__line" aria-hidden="true"></div>
+        <div class="top-sastainability__inner">
+          <h2 class="top-h2">
+            <p class="top-h2--en">Sustainability</p>
+            <p class="top-h2--ja">サステナビリティ</p>
+          </h2>
+          <p class="top-sastainability__text">地域に根ざした活動を通じて、<br>
+            持続可能な社会づくりに貢献します。</p>
+            <a href="" class="btn--blue"><span class="btn--blue__text">
+              詳しく見る
+            </span>
+            </a>
+        </div>
+        <div class="top-sastainabilityList__mask">
+          <div class="top-sastainabilityList__wrap">
+          <ul class="top-sastainabilityList top-sastainabilityList--up">
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_01.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_02.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_03.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_04.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_05.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_06.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_07.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+          </ul>
+          <ul class="top-sastainabilityList top-sastainabilityList--down">
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_01.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_02.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_03.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_04.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_05.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_06.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+            <li class="top-sastainabilityList__item">
+              <img src="images/top/slide_img_07.jpg" alt="" class="top-sastainabilityList__img">
+            </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+      <section class="top-company">
+        <div class="top-company__inner">
+          <h2 class="top-h2">
+            <p class="top-h2--en">Company</p>
+            <p class="top-h2--ja">企業情報</p>
+          </h2>
+          <div class="top-company__content">
+            <div class="top-company__detail">
+              <p class="top-company__detail-text">吉見グループに関する各種情報をご案内します。</p>
+              <a href="" class="btn--white">詳しく見る</a>
+            </div>
+            <ul class="top-companyList">
+              <li class="top-companyList__item">
+                <a href="" class="top-companyList__link">
+                  <img src="images/top/linkcard.svg" alt="" class="top-companyList__img">
+                  <span class="top-companyList__text">ごあいさつ</span>
+                </a>
+              </li>
+              <li class="top-companyList__item">
+                <a href="" class="top-companyList__link">
+                  <img src="images/top/linkcard.svg" alt="" class="top-companyList__img">
+                  <span class="top-companyList__text">会社概要</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__slogan">
+            Connecting People.<br />Moving the Future.
+          </p>
+          <p class="footer__catch">つなぐ力が、未来を動かす。</p>
+          <img
+            src="images/common/logo-white.svg"
+            alt="吉見グループ株式会社"
+            class="footer__logo"
+            width="341"
+            height="49"
+          />
+          <p class="footer__address">
+            〒360-0024　埼玉県熊谷市問屋町2-4-18　ソシオ熊谷情報センタービル5F<br />TEL:048-528-3300　FAX:048-528-3302
+          </p>
+        </div>
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <ul>
+            <li><a href="#about">吉見グループについて</a></li>
+            <li><a href="#business">事業とグループ企業</a></li>
+            <li><a href="#company">企業情報</a></li>
+            <li><a href="#community">地域の皆様へ</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer__copy">
+        Copyright © 吉見グループ株式会社. All Rights Reserved.
+      </p>
+    </footer>
+    <a href="#" class="fixBnr">
+      <img
+        src="images/common/bnr_100th.svg"
+        alt="100周年記念"
+        class="fixBnr__img"
+      />
+    </a>
+    <dialog
+      class="company-modal"
+      id="companyModal"
+      aria-labelledby="companyModalTitle"
+    >
+      <div class="company-modal__panel">
+        <button
+          type="button"
+          class="company-modal__close"
+          id="companyModalClose"
+          aria-label="閉じる"
+        ></button>
+        <div class="company-modal__logo">
+          <img id="companyModalLogo" alt="" />
+        </div>
+        <div class="company-modal__body">
+          <p class="company-modal__category" id="companyModalCategory"></p>
+          <h3 class="company-modal__name" id="companyModalTitle"></h3>
+          <p class="company-modal__desc">
+            <span id="companyModalDesc"></span>
+          </p>
+          <a
+            class="btn--blue"
+            id="companyModalLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="btn--blue__text">公式ウェブサイト</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
+    <script src="js/main_circle.js"></script>
+    <script src="js/hero_path_text.js"></script>
+    <script src="js/company_modal.js"></script>
+    <script src="js/sustainability_slider.js"></script>
+  </body>
+</html>
