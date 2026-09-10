@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
 .under-hero {
     width:92%;
 max-width: 1400px;
@@ -79,6 +84,10 @@ main section:last-child {
 
 
 /*ページ内アンカー*/
+.under-anchor {
+    position: sticky;
+    top: 110px;
+}
 .under-anchor-list {
     width:92%;
 max-width: 1400px;
@@ -87,6 +96,7 @@ max-width: 1400px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
     text-align: center;
 }
+
 .under-anchor-list-item {
     display: inline-block;
 }
