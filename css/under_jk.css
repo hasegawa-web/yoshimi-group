@@ -3,6 +3,8 @@
 -------------*/
 :root {
     --font-jp-serif: "Noto Serif JP", serif;
+    --under-max-width-1: 1400px;
+    --under-width-base: 92%;
 }
 
 html {
@@ -37,10 +39,11 @@ body.under::before {
 
 .under main {
     position: relative;
+    z-index: 1;
 }
 .under section {
-    width: 92%;
-    max-width: 1400px;
+    width: var(--under-width-base);
+    max-width: var(--under-max-width-1);
     margin-inline: auto;
 }
 
@@ -49,10 +52,11 @@ body.under::before {
 }
 
 .under-hero {
-    width:92%;
-/* max-width: 1400px;
-    margin: auto; */
+    width:var(--under-width-base);
+    max-width: var(--under-max-width-1);
+    margin: auto;
     padding-top: 178px;
+    position: relative;
 }
 
 /*ぱんくず*/
@@ -132,9 +136,9 @@ body.under::before {
     margin-bottom: 80px;
 }
 .under-anchor-list {
-/*     width:92%;
-    max-width: 1400px;
-    margin: auto; */
+    width:var(--under-width-base);
+    max-width: var(--under-max-width-1);
+    margin: auto;
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -179,9 +183,10 @@ body.under::before {
 
 /*リード*/
 .under-lead {
-    width:92%;
-/* max-width: 1400px; */
+    width:var(--under-width-base);
+    max-width: var(--under-max-width-1);
     margin: 0px auto 105px;
+    position: relative;
 }
 .under-lead-txt {
     font-weight: 500;
@@ -451,6 +456,7 @@ margin-bottom: 50px;
 .president-sign {
     display: flex;
     justify-content: end;
+    margin-bottom: 100px;
 }
 .president-sign img {
     width: 245px;
@@ -567,4 +573,63 @@ margin-bottom: 50px;
 }
 .under-areas-list-item-txt {
     font-size: 14px;
+}
+
+.under-numbers-box {
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+}
+.under-numbers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.under-numbers-list-item {
+    display: flex;
+    align-items: center;
+}
+.under-numbers-list-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.under-numbers-list-item-img {
+    width: 55%;
+}
+.under-numbers-employee .under-numbers-list-item-img img,
+.under-numbers-gender .under-numbers-list-item-img img,
+.under-numbers-holiday .under-numbers-list-item-img img {
+        width: 84%;
+}
+
+.under-numbers-list-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 45%;
+    max-width: 450px;
+    margin-inline: 60px;
+}
+.under-numbers-list-item:nth-child(even) .under-numbers-list-item-info {
+    text-align: right;
+}
+/* .under-numbers-list-item:nth-child(even) .under-numbers-list-item-ti {
+    text-align: right;
+} */
+.under-numbers-list-item-ti img {
+    display: inline-block;
+    width: auto;
+    max-height: min(5.9vw, 90px);
+}
+
+.under-numbers-gender .under-numbers-list-item-ti img {
+    max-height: 193px;
+}
+.under-numbers-ratio .under-numbers-list-item-ti img {
+    max-height: 221px;
+}
+
+
+.under-numbers-list-item-txt {
+    text-align: left;
 }
