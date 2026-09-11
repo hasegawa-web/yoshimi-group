@@ -3,6 +3,36 @@ html {
     scroll-padding-top: 150px;
 }
 
+body.under::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100vw;
+    background-image: radial-gradient(at 0% 0%, #32669833, transparent 63vw);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+.circle-white {
+    display: block;
+    width: 110vw;
+    height: 99vw;
+    background-color: #fff;
+    position: fixed;
+    left: 124px;
+    top: 123px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.under main {
+    position: relative;
+}
+
+.under footer {
+    position: relative;
+}
+
 .under-hero {
     width:92%;
 max-width: 1400px;
@@ -87,6 +117,7 @@ main section:last-child {
 .under-anchor {
     position: sticky;
     top: 110px;
+    z-index: 100;
 }
 .under-anchor-list {
     width:92%;
@@ -95,6 +126,7 @@ max-width: 1400px;
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
     text-align: center;
+    background: #fff;
 }
 
 .under-anchor-list-item {
@@ -221,6 +253,7 @@ max-width: 1400px;
     aspect-ratio: 100 / 66;
     border: solid 1px var(--color-brand);
     border-radius: 20px;
+    background: #fff;
 }
 .under-business-company-list-item-logo img {
     width: 85%;
@@ -258,3 +291,23 @@ max-width: 1400px;
     font-weight: 500;
     margin-bottom: 50px;
 }
+
+.btn--blue[target="_blank"]::after {
+    background: url(../images/common/icon-outer_white.svg) no-repeat center center, var(--color-brand);
+    position: relative;
+}
+.btn--blue[target="_blank"]:hover::after {
+    background: url(../images/common/icon-outer_blue.svg) no-repeat center center, var(--color-white);
+}
+/* 
+.btn--blue::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: url(../images/common/arrow_white.svg) no-repeat center center, var(--color-brand);
+    position: relative;
+    z-index: 2;
+    transition: background 0.2s ease-in-out;
+} */
