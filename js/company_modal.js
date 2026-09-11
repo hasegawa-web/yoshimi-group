@@ -67,17 +67,42 @@ const descEl = document.getElementById("companyModalDesc");
 const linkEl = document.getElementById("companyModalLink");
 const CLOSE_MS = 320;
 
-function setupMarquee() {
+function createListItem(companyId, data, { clone = false } = {}) {
+  const item = document.createElement("li");
+  item.className = "top-aboutList__item";
+  if (clone) item.setAttribute("aria-hidden", "true");
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "top-aboutList__btn";
+  btn.dataset.company = companyId;
+  if (clone) btn.tabIndex = -1;
+
+  const img = document.createElement("img");
+  img.src = data.logo;
+  img.alt = clone ? "" : data.name;
+  img.className = "top-aboutList__img";
+
+  btn.append(img);
+  item.append(btn);
+  return item;
+}
+
+function renderList() {
   if (!list) return;
 
-  const items = [...list.children];
-  items.forEach((item) => {
-    const clone = item.cloneNode(true);
-    clone.setAttribute("aria-hidden", "true");
-    clone.querySelectorAll("button").forEach((btn) => {
-      btn.setAttribute("tabindex", "-1");
-    });
-    list.appendChild(clone);
+  const entries = Object.entries(companies);
+  list.replaceChildren(
+    ...entries.map(([id, data]) => createListItem(id, data)),
+  );
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    list.classList.add("is-ready");
+    return;
+  }
+
+  entries.forEach(([id, data]) => {
+    list.append(createListItem(id, data, { clone: true }));
   });
 
   list.classList.add("is-ready");
@@ -131,7 +156,7 @@ function closeCompanyModal() {
   window.setTimeout(finish, CLOSE_MS);
 }
 
-setupMarquee();
+renderList();
 
 list?.addEventListener("click", (event) => {
   const btn = event.target.closest(".top-aboutList__btn");
