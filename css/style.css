@@ -414,6 +414,118 @@ header.is-hidden {
 }
 
 /* ========================================
+  Scroll reveal
+  ======================================== */
+
+.top-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.is-inview .top-reveal {
+  animation: top-reveal-up 0.75s ease var(--reveal-delay, 0.12s) both;
+}
+
+@keyframes top-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__title {
+  --reveal-delay: 0.16s;
+}
+
+.hero__catch {
+  --reveal-delay: 0.34s;
+}
+
+.top-about__title {
+  --reveal-delay: 0.08s;
+}
+
+.top-about__text {
+  --reveal-delay: 0.22s;
+}
+
+.top-about .btnList {
+  --reveal-delay: 0.36s;
+}
+
+.top-about__img {
+  --reveal-delay: 0.2s;
+}
+
+.is-inview .top-about__img {
+  animation-name: top-reveal-right;
+}
+
+@keyframes top-reveal-right {
+  from {
+    opacity: 0;
+    transform: translate3d(36px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.top-aboutList-wrap {
+  --reveal-delay: 0.44s;
+}
+
+.is-inview .top-aboutList-wrap {
+  animation-name: top-reveal-fade;
+}
+
+.top-sastainability__inner > .top-h2 {
+  --reveal-delay: 0.16s;
+}
+
+.top-sastainability__text {
+  --reveal-delay: 0.3s;
+}
+
+.top-sastainability__inner .btn--blue {
+  --reveal-delay: 0.44s;
+}
+
+.top-sastainability.is-inview .top-sastainabilityList__mask {
+  animation: top-reveal-fade 0.75s ease 0.22s both;
+}
+
+@keyframes top-reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.top-company .top-h2 {
+  --reveal-delay: 0.08s;
+}
+
+.top-company__content {
+  --reveal-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ========================================
   TOP
   ======================================== */
 
@@ -1139,6 +1251,27 @@ header.is-hidden {
   padding: 220px 0 150px;
 }
 
+.top-sastainability__line-clip {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+}
+
+.top-sastainability.is-inview .top-sastainability__line-clip {
+  animation: top-sastainability-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes top-sastainability-line {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 .top-sastainability__line {
   position: absolute;
   bottom: 0;
@@ -1192,6 +1325,7 @@ header.is-hidden {
   inset: 0;
   z-index: 2;
   pointer-events: none;
+  opacity: 0;
   clip-path: circle(
     var(--sastain-arc-r) at var(--sastain-arc-cx)
       calc(100% - var(--sastain-arc-r))
@@ -1254,8 +1388,15 @@ header.is-hidden {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .top-sastainabilityList.is-ready {
+  .top-sastainabilityList.is-ready,
+  .top-sastainability__line-clip {
     animation: none !important;
+    clip-path: none;
+  }
+
+  .top-sastainabilityList__mask {
+    opacity: 1;
+    animation: none;
   }
 }
 
