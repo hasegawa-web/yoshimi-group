@@ -369,6 +369,12 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  transition: transform 0.35s ease;
+}
+
+header.is-hidden {
+  transform: translate3d(0, calc(-100% - var(--header-pad)), 0);
+  pointer-events: none;
 }
 
 .gnav {
@@ -1210,14 +1216,20 @@ header {
   position: relative;
   display: block;
   width: 350px;
+  transition: transform 0.35s ease;
 }
 
+.top-companyList__link:hover,
+.top-companyList__link:focus-visible {
+  transform: translateY(-8px);
+}
 
-.top-companyList__img {
+.top-companyList__media {
+  display: block;
   width: 350px;
   height: 420px;
-  object-fit: cover;
-  object-position: center;
+  overflow: hidden;
+  position: relative;
   -webkit-mask-image: url("../images/top/linkcard.svg");
   mask-image: url("../images/top/linkcard.svg");
   -webkit-mask-size: 100% 100%;
@@ -1228,8 +1240,36 @@ header {
   mask-position: center;
 }
 
+.top-companyList__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(5 62 105 / 0%);
+  pointer-events: none;
+  transition: background 0.35s ease;
+}
+
+.top-companyList__link:hover .top-companyList__media::after,
+.top-companyList__link:focus-visible .top-companyList__media::after {
+  background: rgb(5 62 105 /40%);
+}
+
+.top-companyList__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease;
+}
+
 .top-companyList__item:first-child .top-companyList__img {
   object-position: center 18%;
+}
+
+.top-companyList__link:hover .top-companyList__img,
+.top-companyList__link:focus-visible .top-companyList__img {
+  transform: scale(1.08);
 }
 
 .top-companyList__text {
@@ -1242,6 +1282,12 @@ header {
   font-weight: 700;
   line-height: 1.4;
   pointer-events: none;
+  transition: transform 0.35s ease;
+}
+
+.top-companyList__link:hover .top-companyList__text,
+.top-companyList__link:focus-visible .top-companyList__text {
+  transform: translateX(4px);
 }
 
 .top-companyList__link::after {
@@ -1256,6 +1302,12 @@ header {
     url("../images/common/arrow2_blue.svg") no-repeat center,
     var(--color-white);
   background-size: 8px 14px, auto;
+  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.top-companyList__link:hover::after,
+.top-companyList__link:focus-visible::after {
+  transform: translateX(4px);
 }
 
 /* ========================================

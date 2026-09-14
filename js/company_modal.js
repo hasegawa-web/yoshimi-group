@@ -1,11 +1,4 @@
 const companies = {
-  "yoshimi-shoji": {
-    name: "吉見商事株式会社",
-    category: "食品卸売事業",
-    desc: "グループ各社との連携を通じて経営基盤を支え、グループ全体の円滑な運営に貢献しています。",
-    url: "https://yoshimi-net.co.jp/business/",
-    logo: "images/common/group/yoshimi-shoji.svg",
-  },
   yamaichi: {
     name: "株式会社ヤマイチ",
     category: "物流事業",
@@ -27,12 +20,12 @@ const companies = {
     url: "https://skillplaza.co.jp/",
     logo: "images/common/group/skillplaza.svg",
   },
-  yasuuemon: {
-    name: "株式会社松本安右衛門商店",
-    category: "グループ事業",
-    desc: "1882年創業、熊谷に根差す「街の不動産屋」として、土地・建物のニーズに応えています。",
+  "yoshimi-shoji": {
+    name: "吉見商事株式会社",
+    category: "食品卸売事業",
+    desc: "世界の価値ある商品・サービスと日本市場をつなぎ、グループの事業領域を世界へ広げています。",
     url: "https://yoshimi-net.co.jp/business/",
-    logo: "images/common/group/yasuuemon.svg",
+    logo: "images/common/group/yoshimi-shoji.svg",
   },
   asentrust: {
     name: "株式会社アゼントラスト",
@@ -48,10 +41,17 @@ const companies = {
     url: "https://yoshimi-net.co.jp/business/",
     logo: "images/common/group/sanei.svg",
   },
+  yasuuemon: {
+    name: "株式会社松本安右衛門商店",
+    category: "グループ事業",
+    desc: "1882年創業、熊谷に根差す「街の不動産屋」として、土地・建物のニーズに応えています。",
+    url: "https://yoshimi-net.co.jp/business/",
+    logo: "images/common/group/yasuuemon.svg",
+  },
   yoshimiyashoten: {
     name: "合資会社吉見屋商店",
     category: "グループ事業",
-    desc: "1924年創業、100年以上の歴史を持つ吉見グループの原点として、不動産事業を担っています。",
+    desc: "グループ各社との連携を通じて経営基盤を支え、グループ全体の円滑な運営に貢献しています",
     url: "https://yoshimi-net.co.jp/business/",
     logo: "images/common/group/yoshimiyashoten.svg",
   },
