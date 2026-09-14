@@ -241,11 +241,27 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
+
+.btn--blue[target="_blank"]::after {
+  background:
+  url("../images/common/icon-outer_blue.svg") no-repeat center center,
+  var(--color-white);
+}
+
+
 .btn--white:hover::after {
   background:
     url("../images/common/arrow_white.svg") no-repeat center center,
     var(--color-brand);
 }
+
+
+.btn--blue[target="_blank"]:hover::after {
+  background:
+  url("../images/common/icon-outer_white.svg") no-repeat center center,
+  var(--color-brand);
+}
+
 
 .btn--white__text {
   color: var(--color-white);
@@ -308,10 +324,22 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
+.btn--blue[target="_blank"]::after {
+  background:
+  url("../images/common/icon-outer_white.svg") no-repeat center center,
+  var(--color-brand);
+}
+
 .btn--blue:hover::after {
   background:
     url("../images/common/arrow_blue.svg") no-repeat center center,
     var(--color-white);
+}
+
+.btn--blue[target="_blank"]:hover::after {
+  background:
+  url("../images/common/icon-outer_blue.svg") no-repeat center center,
+  var(--color-white);
 }
 
 .btn--blue__text {
