@@ -369,6 +369,12 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  transition: transform 0.35s ease;
+}
+
+header.is-hidden {
+  transform: translate3d(0, calc(-100% - var(--header-pad)), 0);
+  pointer-events: none;
 }
 
 .gnav {
