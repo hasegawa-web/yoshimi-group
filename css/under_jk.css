@@ -132,7 +132,7 @@ body.under::before {
 .under-anchor {
     /* position: sticky; */
     position: relative;
-    top: 110px;
+    /* top: 110px; */
     z-index: 100;
     margin-bottom: 80px;
 }
