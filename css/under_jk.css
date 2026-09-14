@@ -130,7 +130,8 @@ body.under::before {
 
 /*ページ内アンカー*/
 .under-anchor {
-    position: sticky;
+    /* position: sticky; */
+    position: relative;
     top: 110px;
     z-index: 100;
     margin-bottom: 80px;
