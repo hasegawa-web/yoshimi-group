@@ -43,6 +43,7 @@ body.under::before {
 .under main {
     position: relative;
     z-index: 1;
+    margin-bottom: 130px;
 }
 .under section {
     width: var(--under-width-base);
@@ -300,7 +301,7 @@ body.under::before {
 
 /*フッター上、内部リンク*/
 .bottom-link {
-    margin-block: 324px 139px;
+    margin-top: 324px;
 }
 .bottom-link-list {
     display: flex;
@@ -759,4 +760,147 @@ section#access {
     position: absolute;
     left: 0px;
     top:calc(50% - 0.1875em);
+}
+
+
+/*プライバシーポリシー*/
+section#privacy {
+    line-height: 1.8em;
+}
+.under-privacy-declaration {
+    text-align: right;
+    margin-bottom: 80px;
+}
+.under-privacy-intro {
+    margin-bottom: 80px;
+}
+
+.under-privacy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.under-privacy-list-item-ti {
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 700;
+    color: var(--color-brand);
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: solid 5px var(--color-brand);
+}
+.under-privacy-inner-list-1-item {
+    padding-left: 1em;
+    position: relative;
+}
+.under-privacy-inner-list-1-item::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #000;
+    position: absolute;
+    top: calc(0.9em - 2px);
+    left: calc(0.5em - 2px);
+}
+
+.under-privacy-inner-list-2,
+.under-privacy-inner-list-3 {
+        padding: 30px;
+    border-radius: 20px;
+    background-color: #ebebeb;
+    margin-top: 30px;
+}
+.under-privacy-inner-list-2 {
+    counter-reset: number;
+}
+
+.under-privacy-inner-list-2:not(:last-child) {
+    margin-bottom: 30px;
+}
+.under-privacy-inner-list-2-item-ti {
+    font-weight: 700;
+    position: relative;
+    padding-left: 2.5em;
+}
+.under-privacy-inner-list-2-item-ti::before {
+    counter-increment: number;
+  content: '（' counter(number) '）';
+  position: absolute;
+  left: 0;
+}
+
+.under-privacy-inner-list-2-item-txt {
+    padding-left: 2.5em;
+}
+.under-privacy-inner-list-2-item-txt:not(:last-child) {
+    margin-bottom: 10px;
+}
+.under-privacy-inner-list-3 {
+    counter-reset: number;
+}
+.under-privacy-inner-list-3:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.under-privacy-inner-list-3-item {
+    padding-left: 1em;
+    position: relative;
+}
+.under-privacy-inner-list-3-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.under-privacy-inner-list-3-item::before {
+    counter-increment: number;
+  content: counter(number) '.';
+  position: absolute;
+  left: 0;
+}
+
+.under-privacy-inner-list-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    counter-reset: number;
+}
+
+.under-privacy-inner-list-4:not(:last-child) {
+    margin-bottom: 30px;
+}
+.under-privacy-inner-list-4-item-ti {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-brand);
+    position: relative;
+    padding-left: 2.5em;
+}
+.under-privacy-inner-list-4-item-ti::before {
+    counter-increment: number;
+  content: '（' counter(number) '）';
+  position: absolute;
+  left: 0;
+}
+
+.under-privacy-inner-list-4-item-txt {
+}
+
+.under-privacy-contact {
+    margin-top: 30px;
+}
+.under-privacy-contact-ti {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-brand);
+    margin-bottom: 10px;
+}
+.under-privacy-contact-info dt {
+    font-weight: 700;
+}
+.under-privacy-contact-info a {
+    text-decoration: underline;
+    color: var(--color-brand);
+    font-weight: 500;
 }
