@@ -625,6 +625,7 @@ header.is-hidden {
 .hero__title {
   position: relative;
   z-index: 2;
+  top: 12vh;
   font-size: 58px;
   font-weight: 700;
   line-height: 1.4em;
@@ -636,6 +637,7 @@ header.is-hidden {
 .hero__catch {
   position: relative;
   z-index: 2;
+  top: 12vh;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6em;
