@@ -241,11 +241,27 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
+
+.btn--blue[target="_blank"]::after {
+  background:
+  url("../images/common/icon-outer_blue.svg") no-repeat center center,
+  var(--color-white);
+}
+
+
 .btn--white:hover::after {
   background:
     url("../images/common/arrow_white.svg") no-repeat center center,
     var(--color-brand);
 }
+
+
+.btn--blue[target="_blank"]:hover::after {
+  background:
+  url("../images/common/icon-outer_white.svg") no-repeat center center,
+  var(--color-brand);
+}
+
 
 .btn--white__text {
   color: var(--color-white);
@@ -308,10 +324,22 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
+.btn--blue[target="_blank"]::after {
+  background:
+  url("../images/common/icon-outer_white.svg") no-repeat center center,
+  var(--color-brand);
+}
+
 .btn--blue:hover::after {
   background:
     url("../images/common/arrow_blue.svg") no-repeat center center,
     var(--color-white);
+}
+
+.btn--blue[target="_blank"]:hover::after {
+  background:
+  url("../images/common/icon-outer_blue.svg") no-repeat center center,
+  var(--color-white);
 }
 
 .btn--blue__text {
@@ -414,6 +442,118 @@ header.is-hidden {
 }
 
 /* ========================================
+  Scroll reveal
+  ======================================== */
+
+.top-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.is-inview .top-reveal {
+  animation: top-reveal-up 0.75s ease var(--reveal-delay, 0.12s) both;
+}
+
+@keyframes top-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__title {
+  --reveal-delay: 0.16s;
+}
+
+.hero__catch {
+  --reveal-delay: 0.34s;
+}
+
+.top-about__title {
+  --reveal-delay: 0.08s;
+}
+
+.top-about__text {
+  --reveal-delay: 0.22s;
+}
+
+.top-about .btnList {
+  --reveal-delay: 0.36s;
+}
+
+.top-about__img {
+  --reveal-delay: 0.2s;
+}
+
+.is-inview .top-about__img {
+  animation-name: top-reveal-right;
+}
+
+@keyframes top-reveal-right {
+  from {
+    opacity: 0;
+    transform: translate3d(36px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.top-aboutList-wrap {
+  --reveal-delay: 0.44s;
+}
+
+.is-inview .top-aboutList-wrap {
+  animation-name: top-reveal-fade;
+}
+
+.top-sastainability__inner > .top-h2 {
+  --reveal-delay: 0.16s;
+}
+
+.top-sastainability__text {
+  --reveal-delay: 0.3s;
+}
+
+.top-sastainability__inner .btn--blue {
+  --reveal-delay: 0.44s;
+}
+
+.top-sastainability.is-inview .top-sastainabilityList__mask {
+  animation: top-reveal-fade 0.75s ease 0.22s both;
+}
+
+@keyframes top-reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.top-company .top-h2 {
+  --reveal-delay: 0.08s;
+}
+
+.top-company__content {
+  --reveal-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ========================================
   TOP
   ======================================== */
 
@@ -485,6 +625,7 @@ header.is-hidden {
 .hero__title {
   position: relative;
   z-index: 2;
+  top: 12vh;
   font-size: 58px;
   font-weight: 700;
   line-height: 1.4em;
@@ -496,6 +637,7 @@ header.is-hidden {
 .hero__catch {
   position: relative;
   z-index: 2;
+  top: 12vh;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6em;
@@ -894,6 +1036,44 @@ header.is-hidden {
   z-index: 2;
   overflow: hidden;
   background-color: transparent;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.top-inNumbers.is-inview {
+  animation: top-inNumbers-appear 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes top-inNumbers-appear {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.top-inNumbers__line-clip {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+}
+
+.top-inNumbers.is-inview .top-inNumbers__line-clip {
+  animation: top-inNumbers-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes top-inNumbers-line {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .top-inNumbers__line {
@@ -940,6 +1120,57 @@ header.is-hidden {
   width: 92%;
   margin-inline: auto;
   padding: 100px 0;
+}
+
+.top-inNumbers__inner > .top-h2,
+.top-inNumbersList__item,
+.top-inNumbers .anchorBtn--blue {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.top-inNumbers.is-inview .top-inNumbers__inner > .top-h2,
+.top-inNumbers.is-inview .top-inNumbersList__item,
+.top-inNumbers.is-inview .anchorBtn--blue {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-inNumbers.is-inview .top-inNumbers__inner > .top-h2 {
+  transition-delay: 0.22s;
+}
+
+.top-inNumbers.is-inview .top-inNumbersList__item:nth-child(1) {
+  transition-delay: 0.36s;
+}
+
+.top-inNumbers.is-inview .top-inNumbersList__item:nth-child(2) {
+  transition-delay: 0.48s;
+}
+
+.top-inNumbers.is-inview .top-inNumbersList__item:nth-child(3) {
+  transition-delay: 0.6s;
+}
+
+.top-inNumbers.is-inview .anchorBtn--blue {
+  transition-delay: 0.74s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .top-inNumbers,
+  .top-inNumbers__line-clip,
+  .top-inNumbers__inner > .top-h2,
+  .top-inNumbersList__item,
+  .top-inNumbers .anchorBtn--blue {
+    clip-path: none;
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
 }
 
 .top-h2 {
@@ -1050,6 +1281,27 @@ header.is-hidden {
   padding: 220px 0 150px;
 }
 
+.top-sastainability__line-clip {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+}
+
+.top-sastainability.is-inview .top-sastainability__line-clip {
+  animation: top-sastainability-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+@keyframes top-sastainability-line {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
 .top-sastainability__line {
   position: absolute;
   bottom: 0;
@@ -1103,6 +1355,7 @@ header.is-hidden {
   inset: 0;
   z-index: 2;
   pointer-events: none;
+  opacity: 0;
   clip-path: circle(
     var(--sastain-arc-r) at var(--sastain-arc-cx)
       calc(100% - var(--sastain-arc-r))
@@ -1165,8 +1418,15 @@ header.is-hidden {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .top-sastainabilityList.is-ready {
+  .top-sastainabilityList.is-ready,
+  .top-sastainability__line-clip {
     animation: none !important;
+    clip-path: none;
+  }
+
+  .top-sastainabilityList__mask {
+    opacity: 1;
+    animation: none;
   }
 }
 

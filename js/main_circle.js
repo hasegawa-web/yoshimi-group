@@ -48,7 +48,7 @@ const ellipseLayout = [
 }));
 
 const clusters = [
-  makeCluster({ x: 0.5, y: 0.46, radius: 220, aspect: 0.62, opacity: 0.5 }),
+  makeCluster({ x: 0.5, y: 0.58, radius: 220, aspect: 0.62, opacity: 0.5 }),
 ];
 
 // The whole set sways together as one rigid shape — a single
