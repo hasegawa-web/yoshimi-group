@@ -10,7 +10,7 @@ const companies = {
     name: "株式会社ヨシミフーズ",
     category: "食品事業",
     desc: "冷凍・冷蔵食品のコールドチェーンを基盤に、安全・安心な食品流通を支えています。",
-    url: "https://yoshimi-net.co.jp/business/",
+    url: "",
     logo: "images/common/group/yoshimifoods.svg",
   },
   skillplaza: {
@@ -24,35 +24,35 @@ const companies = {
     name: "吉見商事株式会社",
     category: "食品卸売事業",
     desc: "世界の価値ある商品・サービスと日本市場をつなぎ、グループの事業領域を世界へ広げています。",
-    url: "https://yoshimi-net.co.jp/business/",
+    url: "",
     logo: "images/common/group/yoshimi-shoji.svg",
   },
   asentrust: {
     name: "株式会社アゼントラスト",
     category: "製造事業",
     desc: "木製パレットを中心とした木材・資材を扱い、資源循環と環境負荷の低減に取り組んでいます。",
-    url: "https://yoshimi-net.co.jp/business/",
+    url: "",
     logo: "images/common/group/asentrust.svg",
   },
   sanei: {
     name: "三栄実業株式会社",
     category: "グループ事業",
     desc: "木製パレットの製造を中心に、培った技術と経験を活かしたものづくりに取り組んでいます。",
-    url: "https://yoshimi-net.co.jp/business/",
+    url: "",
     logo: "images/common/group/sanei.svg",
   },
   yasuuemon: {
     name: "株式会社松本安右衛門商店",
     category: "グループ事業",
     desc: "1882年創業、熊谷に根差す「街の不動産屋」として、土地・建物のニーズに応えています。",
-    url: "https://yoshimi-net.co.jp/business/",
+    url: "",
     logo: "images/common/group/yasuuemon.svg",
   },
   yoshimiyashoten: {
     name: "合資会社吉見屋商店",
     category: "グループ事業",
     desc: "グループ各社との連携を通じて経営基盤を支え、グループ全体の円滑な運営に貢献しています",
-    url: "https://yoshimi-net.co.jp/business/",
+    url: "",
     logo: "images/common/group/yoshimiyashoten.svg",
   },
 };
@@ -118,12 +118,15 @@ function openCompanyModal(companyId) {
   titleEl.textContent = data.name;
   descEl.textContent = data.desc;
 
-  if (data.url) {
-    linkEl.href = data.url;
-    linkEl.hidden = false;
-  } else {
-    linkEl.removeAttribute("href");
-    linkEl.hidden = true;
+  const url = typeof data.url === "string" ? data.url.trim() : "";
+  if (linkEl) {
+    if (url) {
+      linkEl.href = url;
+      linkEl.hidden = false;
+    } else {
+      linkEl.removeAttribute("href");
+      linkEl.hidden = true;
+    }
   }
 
   list?.classList.add("is-paused");
