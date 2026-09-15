@@ -995,14 +995,22 @@ section#privacy {
 }
 
 .under-contact__message {
+    margin: auto;
   margin-bottom: 130px;
   font-weight: 500;
 }
 .under-contact__note {
-  margin-top: 1em;
+  margin-top: 2em;
 }
-
-
+.under-contact__message--send {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.send .under-contact__message {
+    width: fit-content;
+}
 .under-contact-list {
     display: flex;
     flex-wrap: wrap;
@@ -1050,6 +1058,17 @@ font-size: 1.0rem;
   height: 350px;
 }
 
+.confirm .under-contact-list-val input,
+.confirm .under-contact-list-val select,
+.confirm .under-contact-list-val textarea {
+  background: transparent;
+  border: none;
+}
+.confirm .under-contact-list-val textarea {
+  height: auto;
+  field-sizing: content;
+}
+
 .under-contact-privacy-link {
   text-align: center;
   margin-bottom: 20px;
@@ -1068,11 +1087,18 @@ font-size: 1.0rem;
   position: relative;
   overflow: hidden;
 }
+.under-contact-box .confirm .btn--blue {
+  width: 300px;
+}
+
 .under-contact-submit {
   display: flex;
   justify-content: center;
+  gap: 45px;
 }
-.under-contact-box .btn--blue input{
+.under-contact-box .btn--blue input,
+.under-contact-box .btn--blue span {
+
   width: 100%;
   height: 100%;
   padding: 19px 19px 19px 1.5em;
@@ -1083,6 +1109,7 @@ font-size: 1.0rem;
   position: relative;
   z-index: 1;
 }
+
 .under-contact-box .btn--blue:hover input {
   color: var(--color-white);
 }
@@ -1094,6 +1121,26 @@ font-size: 1.0rem;
   top:19px;
 }
 
+.under-contact-box .btn--blue:has(.wpcf7c-btn-back) {
+    border: 1px solid #7b7b7b;
+}
+.under-contact-box .btn--blue:has(.wpcf7c-btn-back)::before {
+    background-color: #7b7b7b;
+}
+.under-contact-box .btn--blue:has(.wpcf7c-btn-back)::after {
+    background-color: #7b7b7b;
+}
+.under-contact-box .btn--blue:has(.wpcf7c-btn-back) input {
+    color: #7b7b7b;
+}
+.under-contact-box .btn--blue:has(.wpcf7c-btn-back):hover input {
+    color: var(--color-white);
+}
+.under-contact-box .btn--blue:has(.wpcf7c-btn-back):hover::after {
+    background: url(../images/common/arrow_gray.svg) no-repeat center center, var(--color-white);
+  }
+    
+
 .recapticha-space {
   text-align: center;
   margin-bottom: 80px;
@@ -1101,4 +1148,10 @@ font-size: 1.0rem;
 .recapticha-space img {
   width: 386px;
   margin: auto;
+}
+
+.confirm .required {
+  display: none;
+}
+.under-contact-box .confirm input {
 }

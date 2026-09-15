@@ -59,103 +59,124 @@
     </div>
     <main>
         <section id="contact" class="under-section-1">
-            <div class="under-section-1__inner">
-                <div class="under-contact-box">
-                    <div class="under-contact-form-box">
-                        <form>
-                            <div class="under-contact-steps">
-                                <div class="under-contact-steps__col"><span class="under-contact-steps__col__number u-font-rajdhani">1</span>
-                                    <p></p>
-                                    <p class="under-contact-steps__col__label">入力</p>
-                                </div>
-                                <div class="under-contact-steps__col is-active"><span class="under-contact-steps__col__number u-font-rajdhani">2</span>
-                                    <p></p>
-                                    <p class="under-contact-steps__col__label">確認</p>
-                                </div>
-                                <div class="under-contact-steps__col"><span class="under-contact-steps__col__number u-font-rajdhani">3</span>
-                                    <p></p>
-                                    <p class="under-contact-steps__col__label">送信</p>
-                                </div>
+            <div class="under-contact-box">
+                <div class="under-contact-form-box">
+                    <form class="confirm">
+                        <div class="under-contact-steps">
+                            <div class="under-contact-steps__col"><span
+                                    class="under-contact-steps__col__number u-font-rajdhani">1</span>
+                                <p></p>
+                                <p class="under-contact-steps__col__label">入力</p>
                             </div>
-                            <div class="under-contact__message">
-                                入力内容に間違いがないかをご確認の上、「送信する」ボタンをクリックしてください。
+                            <div class="under-contact-steps__col is-active"><span
+                                    class="under-contact-steps__col__number u-font-rajdhani">2</span>
+                                <p></p>
+                                <p class="under-contact-steps__col__label">確認</p>
                             </div>
-                            <dl class="under-contact-list">
-                                <dt class="under-contact-list-pro">
-                                    <p>お問い合わせの種別<span class="required">※必須</span>
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val">
-                                    <select name="pets" id="pet-select">
-                                        <option value="">選択してください</option>
-                                        <option value="dog">選択1</option>
-                                        <option value="cat">選択2</option>
-                                        <option value="hamster">選択3</option>
-                                        <option value="parrot">選択4</option>
-                                      </select>
-                                </dd>
-                                <dt class="under-contact-list-pro">
-                                    <p>会社名（組織名）
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email"></span>
-                                    </p>
-                                </dd>
-                                <dt class="under-contact-list-pro">
-                                    <p>氏名<span class="required">※必須</span>
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="address" aria-required="true" aria-invalid="false" value="" type="text" name="text-127"></span>
-                                    </p>
-                                </dd>
-                                <dt class="under-contact-list-pro">
-                                    <p>氏名（フリガナ）<span class="required">※必須</span>
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="address" aria-required="true" aria-invalid="false" value="" type="text" name="text-127"></span>
-                                    </p>
-                                </dd>
-                                <dt class="under-contact-list-pro">
-                                    <p>メールアドレス<span class="required">※必須</span>
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="address" aria-required="true" aria-invalid="false" value="" type="mail" name="text-127"></span>
-                                    </p>
-                                </dd>
-                                <dt class="under-contact-list-pro">
-                                    <p>電話番号
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text id="address" aria-required="true" aria-invalid="false" value="" type="tel" name="text-127"></span>
-                                    </p>
-                                </dd>
-                                <dt class="under-contact-list-pro">
-                                    <p>お問い合わせ内容<span class="required">※必須</span>
-                                    </p>
-                                </dt>
-                                <dd class="under-contact-list-val under-contact-list-val-long">
-                                    <p><span class="wpcf7-form-control-wrap" data-name="textarea-110"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="textarea-110"></textarea></span>
-                                    </p>
-                                </dd>
-                           </dl>
-                           <div class="recapticha-space">
-                            <img src="images/under/contact/recapticha-dummy.png">
-                           </div>
-                           <div class="under-contact-privacy-link">
-                            <a class="link-txt" href="#">個人情報の取り扱い</a>に同意の上、送信してください。
-                           </div>
-                           <div class="under-contact-submit"> 
-                           <p class="under-numbers-list-item-link btn--blue"><input type="submit" value="入力内容を確認する">
-                           </p>
-                           </div>
-                           <!-- <div class="under-numbers-list-item-link"><a class="btn--blue" href="#" target="_blank"><span class="btn--blue__text">100周年特設サイト</span></a></div> -->
-                        </form>
-                    </div>
+                            <div class="under-contact-steps__col"><span
+                                    class="under-contact-steps__col__number u-font-rajdhani">3</span>
+                                <p></p>
+                                <p class="under-contact-steps__col__label">送信</p>
+                            </div>
+                        </div>
+                        <div class="under-contact__message">
+                            入力内容に間違いがないかをご確認の上、「送信する」ボタンをクリックしてください。
+                        </div>
+                        <dl class="under-contact-list">
+                            <dt class="under-contact-list-pro">
+                                <p>お問い合わせの種別<span class="required">※必須</span>
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val">
+                                <select name="pets" id="pet-select" disabled>
+                                    <option value="">選択してください</option>
+                                    <option value="dog">選択1</option>
+                                    <option value="cat">選択2</option>
+                                    <option value="hamster">選択3</option>
+                                    <option value="parrot">選択4</option>
+                                </select>
+                            </dd>
+                            <dt class="under-contact-list-pro">
+                                <p>会社名（組織名）
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val">
+                                <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40"
+                                            maxlength="400"
+                                            class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email"
+                                            aria-required="true" aria-invalid="false" value="長谷川ウェブ設計" type="email"
+                                            name="your-email" disabled></span>
+                                </p>
+                            </dd>
+                            <dt class="under-contact-list-pro">
+                                <p>氏名<span class="required">※必須</span>
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val">
+                                <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40"
+                                            maxlength="400"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                            id="address" aria-required="true" aria-invalid="false" value="上島健二"
+                                            type="text" name="text-127" disabled></span>
+                                </p>
+                            </dd>
+                            <dt class="under-contact-list-pro">
+                                <p>氏名（フリガナ）<span class="required">※必須</span>
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val">
+                                <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40"
+                                            maxlength="400"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                            id="address" aria-required="true" aria-invalid="false" value="ジョウシマケンジ"
+                                            type="text" name="text-127" disabled></span>
+                                </p>
+                            </dd>
+                            <dt class="under-contact-list-pro">
+                                <p>メールアドレス<span class="required">※必須</span>
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val">
+                                <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40"
+                                            maxlength="400"
+                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                            id="address" aria-required="true" aria-invalid="false"
+                                            value="joshima@hasega-wa.jp" type="mail" name="text-127" disabled></span>
+                                </p>
+                            </dd>
+                            <dt class="under-contact-list-pro">
+                                <p>電話番号
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val">
+                                <p><span class="wpcf7-form-control-wrap" data-name="text-127"><input size="40"
+                                            maxlength="400" class="wpcf7-form-control wpcf7-text id=" address"
+                                            aria-required="true" aria-invalid="false" value="00011112222" type="tel"
+                                            name="text-127" disabled></span>
+                                </p>
+                            </dd>
+                            <dt class="under-contact-list-pro">
+                                <p>お問い合わせ内容<span class="required">※必須</span>
+                                </p>
+                            </dt>
+                            <dd class="under-contact-list-val under-contact-list-val-long">
+                                <p><span class="wpcf7-form-control-wrap" data-name="textarea-110"><textarea cols="40"
+                                            rows="10" maxlength="2000"
+                                            class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                            aria-required="true" aria-invalid="false" name="textarea-110"
+                                            data-name="">このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。このテキストはダミーです。</textarea></span>
+                                </p>
+                            </dd>
+                        </dl>
+                        <div class="under-contact-submit">
+                            <p class="under-numbers-list-item-link btn--blue"><input class="wpcf7c-btn-back"
+                                    type="submit" value="戻る">
+                            </p>
+                            <p class="under-numbers-list-item-link btn--blue"><input type="submit" value="送信する">
+                            </p>
+                        </div>
+                        <!-- <div class="under-numbers-list-item-link"><a class="btn--blue" href="#" target="_blank"><span class="btn--blue__text">100周年特設サイト</span></a></div> -->
+                    </form>
                 </div>
             </div>
         </section>
