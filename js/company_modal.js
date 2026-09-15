@@ -10,7 +10,7 @@ const companies = {
     name: "株式会社ヨシミフーズ",
     category: "食品事業",
     desc: "冷凍・冷蔵食品のコールドチェーンを基盤に、安全・安心な食品流通を支えています。",
-    url: "",
+    url: "https://yoshimifoods-y.jp/",
     logo: "images/common/group/yoshimifoods.svg",
   },
   skillplaza: {
@@ -31,7 +31,7 @@ const companies = {
     name: "株式会社アゼントラスト",
     category: "製造事業",
     desc: "木製パレットを中心とした木材・資材を扱い、資源循環と環境負荷の低減に取り組んでいます。",
-    url: "",
+    url: "https://www.asentrust.co.jp/",
     logo: "images/common/group/asentrust.svg",
   },
   sanei: {
@@ -45,7 +45,7 @@ const companies = {
     name: "株式会社松本安右衛門商店",
     category: "グループ事業",
     desc: "1882年創業、熊谷に根差す「街の不動産屋」として、土地・建物のニーズに応えています。",
-    url: "",
+    url: "https://www.yasuuemon.co.jp/",
     logo: "images/common/group/yasuuemon.svg",
   },
   yoshimiyashoten: {
