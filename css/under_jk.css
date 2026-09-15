@@ -481,6 +481,11 @@ margin-bottom: 50px;
     margin: auto;
 }
 
+.greeting-poem__aside {
+    font-size: 14px;
+    width: fit-content;
+    margin: 30px auto 0px;
+}
 
 .under-section-1__inner_gredo {
     margin-bottom: 186px;
