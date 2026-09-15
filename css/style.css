@@ -997,7 +997,7 @@ header.is-hidden {
 }
 
 .company-modal__link[hidden] {
-  display: none;
+  display: none !important;
 }
 
 @media (width <= 767px) {
