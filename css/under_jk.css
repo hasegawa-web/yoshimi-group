@@ -15,9 +15,10 @@ html {
 /*-------------
 下層共通
 -------------*/
-/* body.under {
-overflow: hidden;
-} */
+body.under {
+/* overflow: hidden; */
+line-height: 1.8em;
+}
 body.under::before {
     content: "";
     display: block;
@@ -50,6 +51,9 @@ body.under::before {
     width: var(--under-width-base);
     max-width: var(--under-max-width-1);
     margin-inline: auto;
+}
+.under section:not(:last-of-type) {
+    margin-bottom: 200px;
 }
 
 .under footer {
@@ -218,6 +222,7 @@ a.link-txt {
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2em;
+    letter-spacing: 0.1em;
 }
 
 .under-h2-2 {
@@ -254,6 +259,17 @@ a.link-txt {
     font-size: 24px;
 }
 
+.under-h2-3 {
+    font-size: 24px;
+    line-height: 1.4em;
+    font-weight: 700;
+    color: var(--color-brand);
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: solid 5px var(--color-brand);
+}
+
+
 .under-h3-2 {
     display: flex;
     flex-direction: row;
@@ -288,7 +304,76 @@ a.link-txt {
     font-size: 22px;
 }
 
+/*共通 リスト*/
+.under-list-1-item {
+    padding-left: 1em;
+    position: relative;
+}
+.under-list-1-item::before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #000;
+    position: absolute;
+    top: calc(0.9em - 2px);
+    left: calc(0.5em - 2px);
+}
 
+.under-list-2,
+.under-list-3 {
+        padding: 30px;
+    border-radius: 20px;
+    background-color: #ebebeb;
+    margin-top: 30px;
+}
+.under-list-2 {
+    counter-reset: number;
+}
+
+.under-list-2:not(:last-child) {
+    margin-bottom: 30px;
+}
+.under-list-2-item-ti {
+    font-weight: 700;
+    position: relative;
+    padding-left: 2.5em;
+}
+.under-list-2-item-ti::before {
+    counter-increment: number;
+  content: '（' counter(number) '）';
+  position: absolute;
+  left: 0;
+}
+
+.under-list-2-item-txt {
+    padding-left: 2.5em;
+}
+.under-list-2-item-txt:not(:last-child) {
+    margin-bottom: 10px;
+}
+.under-list-3 {
+    counter-reset: number;
+}
+.under-list-3:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.under-list-3-item {
+    padding-left: 1em;
+    position: relative;
+}
+.under-list-3-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.under-list-3-item::before {
+    counter-increment: number;
+  content: counter(number) '.';
+  position: absolute;
+  left: 0;
+}
 
 /*外部リンク*/
 .btn--blue[target="_blank"]::after {
@@ -309,7 +394,7 @@ a.link-txt {
 
 /*フッター上、内部リンク*/
 .bottom-link {
-    margin-top: 324px;
+    margin-top: 300px;
 }
 .bottom-link-list {
     display: flex;
@@ -337,11 +422,13 @@ a.link-txt {
 .bottom-link-list-item-info {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 .bottom-link-list-item-info-main {
     font-size: 3.4vw;
     font-family: var(--font-en);
     font-weight: 700;
+    line-height: 1em;
 }
 .bottom-link-list-item-info-sub {
     font-size: 1.3vw;
@@ -358,6 +445,10 @@ a.link-txt {
 .w100 {
     width: 100% !important;
 }
+.mw1000 {
+    max-width: 1000px;
+    margin: auto;
+}
 
 /*文字関連*/
 .txtB {
@@ -368,16 +459,24 @@ a.link-txt {
 事業とグループ企業
 -------------*/
 /*企業一覧*/
+.under-business-unit {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
+}
 .under-business-unit-summary {
     font-weight: 500;
     margin-bottom: 80px;
 }
 
-.under-section-1__inner {
+/* .under-section-1__inner {
     margin-top: 80px;
 }
 .under-section-1__inner:not(:first-child) {
     margin-top: 140px;
+} */
+.under-section-1__inner:not(:last-child) {
+    margin-bottom: 70px;
 }
 
 .under-business-company-list {
@@ -447,7 +546,7 @@ a.link-txt {
 /*-------------
 吉見グループについて
 -------------*/
-section#greeting {
+/* section#greeting {
     margin-bottom: 192px;
 }
 section#philosophy {
@@ -455,7 +554,7 @@ section#philosophy {
 }
 section#areas {
     margin-bottom: 120px;
-}
+} */
 .under-greeting-txt {
     display: flex;
     flex-direction: column;
@@ -654,12 +753,12 @@ margin-bottom: 50px;
 
 
 /*企業情報*/
-section#profile {
+/* section#profile {
     margin-bottom: 110px;
 }
 section#access {
     margin-bottom: 290px;
-}
+} */
 
 .under-company-conent {
     display: flex;
@@ -777,100 +876,21 @@ section#access {
 
 
 /*プライバシーポリシー*/
-section#privacy {
+/* section#privacy {
     line-height: 1.8em;
-}
+} */
 .under-privacy-declaration {
     text-align: right;
     margin-bottom: 80px;
 }
 .under-privacy-intro {
-    margin-bottom: 80px;
+    margin-bottom: 86px;
 }
 
 .under-privacy-list {
     display: flex;
     flex-direction: column;
     gap: 120px;
-}
-
-.under-privacy-list-item-ti {
-    font-size: 24px;
-    line-height: 1.4em;
-    font-weight: 700;
-    color: var(--color-brand);
-    margin-bottom: 30px;
-    padding-left: 15px;
-    border-left: solid 5px var(--color-brand);
-}
-.under-privacy-inner-list-1-item {
-    padding-left: 1em;
-    position: relative;
-}
-.under-privacy-inner-list-1-item::before {
-    content: "";
-    display: block;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #000;
-    position: absolute;
-    top: calc(0.9em - 2px);
-    left: calc(0.5em - 2px);
-}
-
-.under-privacy-inner-list-2,
-.under-privacy-inner-list-3 {
-        padding: 30px;
-    border-radius: 20px;
-    background-color: #ebebeb;
-    margin-top: 30px;
-}
-.under-privacy-inner-list-2 {
-    counter-reset: number;
-}
-
-.under-privacy-inner-list-2:not(:last-child) {
-    margin-bottom: 30px;
-}
-.under-privacy-inner-list-2-item-ti {
-    font-weight: 700;
-    position: relative;
-    padding-left: 2.5em;
-}
-.under-privacy-inner-list-2-item-ti::before {
-    counter-increment: number;
-  content: '（' counter(number) '）';
-  position: absolute;
-  left: 0;
-}
-
-.under-privacy-inner-list-2-item-txt {
-    padding-left: 2.5em;
-}
-.under-privacy-inner-list-2-item-txt:not(:last-child) {
-    margin-bottom: 10px;
-}
-.under-privacy-inner-list-3 {
-    counter-reset: number;
-}
-.under-privacy-inner-list-3:not(:last-child) {
-    margin-bottom: 30px;
-}
-
-.under-privacy-inner-list-3-item {
-    padding-left: 1em;
-    position: relative;
-}
-.under-privacy-inner-list-3-item:not(:last-child) {
-    margin-bottom: 10px;
-}
-.under-privacy-inner-list-3-item::before {
-    counter-increment: number;
-  content: counter(number) '.';
-  position: absolute;
-  left: 0;
 }
 
 .under-privacy-inner-list-4 {
@@ -1154,4 +1174,26 @@ font-size: 1.0rem;
   display: none;
 }
 .under-contact-box .confirm input {
+}
+
+
+/*サステイナビリティ*/
+.under-txt-1-col2 {
+    display: flex;
+    gap: 6.25vw;
+}
+.under-txt-1-col2-left {
+    width: 44%;
+    flex-shrink: 0;
+}
+.under-txt-1-col2-img {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.under-sustaina-summary {
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.under-txt-1-col2-right__inner:not(:last-child) {
+    margin-bottom: 70px;
 }
