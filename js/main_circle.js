@@ -51,6 +51,13 @@ const clusters = [
   makeCluster({ x: 0.5, y: 0.58, radius: 220, aspect: 0.62, opacity: 0.5 }),
 ];
 
+const MOBILE_BREAKPOINT = 767;
+const MOBILE_SCALE = 0.64;
+
+function getCircleScale() {
+  return W <= MOBILE_BREAKPOINT ? MOBILE_SCALE : 1;
+}
+
 // The whole set sways together as one rigid shape — a single
 // shared angle rotates every ellipse's position AND tilt in the
 // same direction at the same time, so the motion reads as one
@@ -68,10 +75,12 @@ function draw(t) {
   const phase = ((t % LOOP_PERIOD_MS) / LOOP_PERIOD_MS) * Math.PI * 2;
   const sway = Math.sin(phase); // -1..1, single shared driver
 
+  const scale = getCircleScale();
+
   clusters.forEach((cl) => {
     const cx = cl.baseX * W;
     const cy = cl.baseY * H;
-    const rx = cl.radius;
+    const rx = cl.radius * scale;
     const ry = rx * cl.aspect;
 
     ellipseLayout.forEach((layout, i) => {
@@ -85,8 +94,8 @@ function draw(t) {
       // turns together like one rigid piece
       const cos = Math.cos(swayAngle);
       const sin = Math.sin(swayAngle);
-      const ex = cx + layout.dx * cos - layout.dy * sin;
-      const ey = cy + layout.dx * sin + layout.dy * cos;
+      const ex = cx + layout.dx * scale * cos - layout.dy * scale * sin;
+      const ey = cy + layout.dx * scale * sin + layout.dy * scale * cos;
       const rot = layout.rotation + swayAngle;
 
       // the ellipse outline
