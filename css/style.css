@@ -406,7 +406,7 @@ header.is-hidden {
 }
 
 .gnav {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 20px;
 }
@@ -441,6 +441,79 @@ header.is-hidden {
   width: 100%;
 }
 
+.gnav__btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 30px;
+  background-color: var(--color-brand);
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  line-height: 1em;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+
+
+@media (width >= 1060px) {
+  .gnav__btn {
+    display: none;
+  }
+}
+
+@media (width < 1060px) {
+  header {
+    top: 2%;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+  .gnav {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 20px;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  header.is-hidden .gnav {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .gnav.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .gnavList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .gnavList__content {
+    text-align: right;
+  }
+}
+
+@media (width < 520px) {
+  .head__logo-img {
+    width: calc(100vw - 160px);
+  }
+}
 /* ========================================
   Scroll reveal
   ======================================== */
@@ -1613,12 +1686,16 @@ header.is-hidden {
   font-size: 16px;
   line-height: 1.6;
 }
-
+.footer__address--ib {
+  display: inline-block;
+  font-size: inherit;
+}
 .footer__nav {
   display: flex;
   align-items: stretch;
   padding-left: 42px;
   border-left: 1px solid rgb(255 255 255 / 55%);
+  flex-shrink: 0;
 }
 
 .footer__nav ul {
@@ -1640,6 +1717,77 @@ header.is-hidden {
   line-height: 1.6;
 }
 
+@media (width < 900px) {
+  .footer__slogan {
+    font-size: 32px;
+  }
+  .footer__catch {
+    font-size: 20px;
+  }
+  .footer__logo {
+    width: 250px;
+  }
+}
+
+@media (width < 640px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .footer__address {
+    font-size: 14px;
+    width: 400px;
+    text-align: center;
+  }
+  .footer__nav {
+    padding-left: 0px;
+    border-left: none;
+    display: block;
+  }
+  .footer__nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+  }
+  .footer__nav ul li {
+    width: 50%;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+  .footer__nav ul li a {
+    line-height: 1.2em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+  .footer__nav ul li a::before {
+    content: "";
+    display: block;
+    width: 3px;
+    background: var(--color-brand-dark);
+  }
+}
+
+@media (width < 440px) {
+  .footer {
+    padding: 30px 20px 20px;
+  }
+  .footer__nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+  }
+}
 /* ========================================
   Fix BNR
   ======================================== */
