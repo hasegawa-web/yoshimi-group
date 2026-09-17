@@ -707,6 +707,8 @@ header.is-hidden {
   margin-bottom: 40px;
 }
 
+
+
 .hero__catch {
   position: relative;
   z-index: 2;
@@ -716,6 +718,15 @@ header.is-hidden {
   line-height: 1.6em;
   color: var(--color-white);
   text-align: center;
+}
+
+@media (width <= 767px) {
+  .hero__title {
+    font-size: 38px;
+  }
+  .hero__catch {
+    font-size: 16px;
+  }
 }
 
 .top-about {
@@ -1796,6 +1807,7 @@ header.is-hidden {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  max-width: 40%;
   z-index: 100;
   display: inline-block;
   opacity: 1;
@@ -1811,4 +1823,8 @@ header.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.fixBnr__img {
+  width: 100%;
 }
