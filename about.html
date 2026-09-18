@@ -26,7 +26,12 @@
         />
       </a>
       <nav class="gnav">
-        <ul class="gnavList">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="gnav-btn">
+          <span>MENU</span>
+        </label>
+          <ul class="gnavList">
           <li class="gnavList__content">
             <a href="about.html" class="gnavList__link">吉見グループについて</a>
           </li>
@@ -60,9 +65,9 @@
       <div class="under-anchor">
         <ul class="under-anchor-list">
           <li class="under-anchor-list-item"><a href="#greeting"><span>ごあいさつ</span></a></li>
-          <li class="under-anchor-list-item"><a href="#philosophy"><span>企業理念・行動指針</span></a></li>
+          <li class="under-anchor-list-item"><a href="#philosophy"><span><i>企業理念・</i><i>行動指針</i></span></a></li>
           <li class="under-anchor-list-item"><a href="#areas"><span>事業領域</span></a></li>
-          <li class="under-anchor-list-item"><a href="#numbers"><span>数字で見る吉見グループ</span></a></li>
+          <li class="under-anchor-list-item"><a href="#numbers"><span><i>数字で見る</i><i>吉見グループ</i></span></a></li>
         </ul>
       </div>
       <main>
@@ -96,7 +101,6 @@
           </div>
           <div class="greeting-poem">
             <img src="images/under/about/img-02.png" alt="">
-            <aside class="greeting-poem__aside">初代大久保一が撒いた「一粒の麦」により、人とつながり、縁がつながり、今日の吉見グループを創ってまいりました。</aside>
           </div>
         </div>
       </section>
@@ -127,20 +131,20 @@
           </h3>
           <div class="under-vision-box">
             <dl class="under-vision-list">
-              <dt class="under-vision-ti">企業理念</dt>
+              <dt class="under-vision-ti"><span>企業理念</span></dt>
               <dd class="under-vision-txt">
                 <p class="under-vision-txt-main"><span>地域産業プロデュースにより、</span><span>豊かさと夢を実現させる</span></p>
               </dd>
-              <dt class="under-vision-ti">経営理念</dt>
+              <dt class="under-vision-ti"><span>経営理念</span></dt>
               <dd class="under-vision-txt">
                 <p class="under-vision-txt-main"><span>変革とカイゼン</span></p>
                 <p class="under-vision-txt-sub"><span>～どの時代にもどの領域においても</span><span>選ばれる企業体へ～</span></p>
               </dd>
-              <dt class="under-vision-ti">グループビジョン</dt>
+              <dt class="under-vision-ti"><span>グループビジョン</span></dt>
               <dd class="under-vision-txt">
                 <p class="under-vision-txt-main"><span>エリアリーディング</span><span>カンパニーを目指す</span></p>
               </dd>
-              <dt class="under-vision-ti">人事理念</dt>
+              <dt class="under-vision-ti"><span>人事理念</span></dt>
               <dd class="under-vision-txt">
                 <p class="under-vision-txt-main"><span>挑戦する人材を創造</span></p>
                 <p class="under-vision-txt-sub"><span>～経営目標を達成し</span><span>企業の継続的発展へ～</span></p>
@@ -216,12 +220,15 @@
           </h2>
           <div class="under-numbers-box">
             <ul class="under-numbers-list">
-              <li class="under-numbers-list-item">
-                <div class="under-numbers-list-item-img">
-                  <img src="images/under/about/img-03.svg" alt="創業102年">
+              <li class="under-numbers-list-item under-numbers-founding">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-03-num.png" alt="創業102年">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-03.png" alt="創業102年">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
                     <img src="images/under/about/img-03-num.png" alt="創業102年">
                   </h3>
                   <div class="under-numbers-list-item-txt">大正13年の創業以来、100年以上にわたり信頼と実績を積み重ねてきました。</div>
@@ -230,22 +237,28 @@
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-employee">
-                <div class="under-numbers-list-item-img">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-04-num.png" alt="従業員数1,024名">
+                </h3>
+              <div class="under-numbers-list-item-img">
                   <img src="images/under/about/img-04.png" alt="従業員数1,024名">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
                     <img src="images/under/about/img-04-num.png" alt="従業員数1,024名">
                   </h3>
                   <div class="under-numbers-list-item-txt">グループ全体</div>
                 </div>
               </li>
-              <li class="under-numbers-list-item">
-                <div class="under-numbers-list-item-img">
+              <li class="under-numbers-list-item under-numbers-group">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-05-num.png" alt="グループ会社数9社">
+                </h3>
+              <div class="under-numbers-list-item-img">
                   <img src="images/under/about/img-05.png" alt="グループ会社数9社">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
                     <img src="images/under/about/img-05-num.png" alt="グループ会社数9社">
                   </h3>
                   <div class="under-numbers-list-item-txt">※2026年8月時点</div>
@@ -254,32 +267,41 @@
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-gender">
-                <div class="under-numbers-list-item-img">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-06-num.png" alt="男女比 （男性）35.5：（女性）64.5">
+                </h3>
+              <div class="under-numbers-list-item-img">
                   <img src="images/under/about/img-06.png" alt="男女比 （男性）35.5：（女性）64.5">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
                     <img src="images/under/about/img-06-num.png" alt="男女比 （男性）35.5：（女性）64.5">
                   </h3>
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-holiday">
-                <div class="under-numbers-list-item-img">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-07-num.png" alt="年間休日125日">
+                </h3>
+              <div class="under-numbers-list-item-img">
                   <img src="images/under/about/img-07.png" alt="年間休日125日">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
                     <img src="images/under/about/img-07-num.png" alt="年間休日125日">
                   </h3>
                   <div class="under-numbers-list-item-txt">ワークライフバランスを大切にし、プライベートも充実できる環境を整えています。</div>
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-ratio">
-                <div class="under-numbers-list-item-img">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-08-num.png" alt="業種比率 物流：62% 人材：10% 製造：8% その他：20%">
+                </h3>
+              <div class="under-numbers-list-item-img">
                   <img src="images/under/about/img-08.png" alt="業種比率 物流：62% 人材：10%">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
                     <img src="images/under/about/img-08-num.png" alt="業種比率 物流：62% 人材：10% 製造：8% その他：20%">
                   </h3>
                 </div>
