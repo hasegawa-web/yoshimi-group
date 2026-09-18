@@ -12,6 +12,55 @@ html {
     /* scroll-padding-top: 150px; */
 }
 
+/*ナビゲーション スマホ対応*/
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.gnav-btn {
+  display: none;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4em;
+  color: var(--color-white);
+  background-color: var(--color-brand);
+  border-radius: 5px;
+}
+@media (width < 1060px) {
+  .gnav {
+    width: fit-content;
+    padding: 0px;
+    opacity: 1;
+    visibility: visible;
+    top: 0px;
+    right: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-right: -6px;
+    gap: 15px;
+    z-index: 1000;
+    background: none;
+    pointer-events: all;
+  
+  }
+  .gnav-btn {
+    display: block;
+  }
+  .gnavList {
+    display: block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+  }
+  .menu-toggle:checked ~ .gnavList {
+    max-height: 500px;
+  }
+}
+
 /*-------------
 下層共通
 -------------*/
