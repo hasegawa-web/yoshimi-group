@@ -28,20 +28,24 @@
         <nav class="gnav">
             <ul class="gnavList">
                 <li class="gnavList__content">
-                    <a href="" class="gnavList__link">吉見グループについて</a>
-                </li>
-                <li class="gnavList__content">
-                    <a href="" class="gnavList__link">事業とグループ企業</a>
-                </li>
-                <li class="gnavList__content">
-                    <a href="" class="gnavList__link">企業情報</a>
-                </li>
-                <li class="gnavList__content">
-                    <a href="" class="gnavList__link">地域の皆様へ</a>
-                </li>
-                <li class="gnavList__content">
-                    <a href="" class="gnavList__link">お問い合わせ</a>
-                </li>
+                    <a href="about.html" class="gnavList__link">吉見グループについて</a>
+                  </li>
+                  <li class="gnavList__content">
+                    <a href="business.html" class="gnavList__link"
+                      >事業とグループ企業</a
+                    >
+                  </li>
+                  <li class="gnavList__content">
+                    <a href="company.html" class="gnavList__link">企業情報</a>
+                  </li>
+                  <li class="gnavList__content">
+                    <a href="sustainability.html" class="gnavList__link"
+                      >サステナビリティ</a
+                    >
+                  </li>
+                  <li class="gnavList__content">
+                    <a href="contact.html" class="gnavList__link">お問い合わせ</a>
+                  </li>
             </ul>
         </nav>
     </header>
@@ -190,58 +194,43 @@
 
     <footer class="footer" id="contact">
         <div class="footer__inner">
-            <div class="footer__brand">
-                <p class="footer__slogan">
-                    Connecting People.<br />Moving the Future.
-                </p>
-                <p class="footer__catch">つなぐ力が、未来を動かす。</p>
-                <a href="/" class="footer__logo-link">
-                    <img
-                      src="images/common/logo-white.svg"
-                      alt="吉見グループ株式会社"
-                      class="footer__logo"
-                      width="341"
-                      height="49"
-                    />
-                  </a>
-                <p class="footer__address">
-                    〒360-0024　埼玉県熊谷市問屋町2-4-18　ソシオ熊谷情報センタービル5F<br />TEL:048-528-3300　FAX:048-528-3302
-                </p>
-            </div>
-            <nav class="footer__nav" aria-label="フッターナビゲーション">
-                <ul>
-                    <li><a href="#about">吉見グループについて</a></li>
-                    <li><a href="#business">事業とグループ企業</a></li>
-                    <li><a href="#company">企業情報</a></li>
-                    <li><a href="#community">地域の皆様へ</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
-                    <li><a href="#">プライバシーポリシー</a></li>
-                    <li><a href="">創業100周年特設サイト</a></li>
-                </ul>
-            </nav>
+          <div class="footer__brand">
+            <p class="footer__slogan">
+              Connecting People.<br />Moving the Future.
+            </p>
+            <p class="footer__catch">つなぐ力が、未来を動かす。</p>
+            <a href="/" class="footer__logo-link">
+              <img
+                src="images/common/logo-white.svg"
+                alt="吉見グループ株式会社"
+                class="footer__logo"
+                width="341"
+                height="49"
+              />
+            </a>
+            <p class="footer__address">
+              〒360-0024　埼玉県熊谷市問屋町2-4-18　<span
+                class="footer__address--ib"
+                >ソシオ熊谷情報センタービル5F</span
+              ><br />TEL:048-528-3300　FAX:048-528-3302
+            </p>
+          </div>
+          <nav class="footer__nav" aria-label="フッターナビゲーション">
+            <ul>
+              <li><a href="about.html">吉見グループについて</a></li>
+              <li><a href="business.html">事業とグループ企業</a></li>
+              <li><a href="company.html">企業情報</a></li>
+              <li><a href="sustainability.html">サステナビリティ</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+              <li><a href="privacy.html">プライバシーポリシー</a></li>
+              <li><a href="" target="_blank">創業100周年特設サイト</a></li>
+            </ul>
+          </nav>
         </div>
         <p class="footer__copy">
-            Copyright © 吉見グループ株式会社. All Rights Reserved.
+          Copyright © 吉見グループ株式会社. All Rights Reserved.
         </p>
-    </footer>
-    <dialog class="company-modal" id="companyModal" aria-labelledby="companyModalTitle">
-        <div class="company-modal__panel">
-            <button type="button" class="company-modal__close" id="companyModalClose" aria-label="閉じる"></button>
-            <div class="company-modal__logo">
-                <img id="companyModalLogo" alt="" />
-            </div>
-            <div class="company-modal__body">
-                <p class="company-modal__category" id="companyModalCategory"></p>
-                <h3 class="company-modal__name" id="companyModalTitle"></h3>
-                <p class="company-modal__desc">
-                    <span id="companyModalDesc"></span>
-                </p>
-                <a class="btn--blue" id="companyModalLink" target="_blank" rel="noopener noreferrer">
-                    <span class="btn--blue__text">公式ウェブサイト</span>
-                </a>
-            </div>
-        </div>
-    </dialog>
+      </footer>
     <script src="js/header.js"></script>
 </body>
 
