@@ -90,8 +90,9 @@ body.under::before {
     z-index: 0;
 }
 @media screen and (width < 767px) {
-  body.under * {
-    font-size: 14px;
+  .under * {
+    /* font-size: 14px; */
+    /* line-height: 1.8em; */
     }
 }
 
@@ -181,7 +182,7 @@ a.link-txt {
 
 /*下層ヒーロー（ページタイトル）*/
 .under-hero-box {
-    margin: 30px 0px 90px;
+    margin: 0px 0px 90px;
 }
 
 .under-hero-box::after {
@@ -218,7 +219,7 @@ a.link-txt {
 }
 @media screen and (width < 767px) {
   .under-hero-box {
-    margin: 10px 0px 40px;
+    margin: 0px 0px 40px;
   }
   .under-page-ti {
     padding-bottom: 40px;
@@ -460,8 +461,13 @@ line-height: 1.2em;
     margin-bottom: 30px;
     padding-left: 15px;
     border-left: solid 5px var(--color-brand);
+    text-wrap: inherit;
 }
-
+@media screen and (width < 767px) {
+  .under-h2-3 {
+    font-size: 18px;
+  }
+}
 
 .under-h3-2 {
     display: flex;
@@ -475,8 +481,8 @@ line-height: 1.2em;
 .under-h3-2-main {
     font-size: 32px;
     font-weight: 500;
-    padding-right: 30px;
     padding-left: 23px;
+    padding-right: 30px;
     margin-right: 30px;
     border-right: solid 1px #828282 ;
     line-height: 1em;
@@ -508,6 +514,9 @@ line-height: 1.2em;
     font-size: 20px;
     padding-left: 20px;
     border-right: none;
+    padding-right: 0px;
+    margin-right: 0px;
+
   }
   .under-h3-2-sub {
     font-size: 14px;
@@ -531,7 +540,14 @@ line-height: 1.2em;
     top: calc(0.9em - 2px);
     left: calc(0.5em - 2px);
 }
-
+@media screen and (width < 767px) {
+  .under-list-1-item {
+    font-size: 14px;
+  }
+  .under-list-1-item::before {
+    top: calc(1.2em - 2px);
+  }
+}
 .under-list-2,
 .under-list-3 {
         padding: 30px;
@@ -542,7 +558,6 @@ line-height: 1.2em;
 .under-list-2 {
     counter-reset: number;
 }
-
 .under-list-2:not(:last-child) {
     margin-bottom: 30px;
 }
@@ -564,6 +579,21 @@ line-height: 1.2em;
 .under-list-2-item-txt:not(:last-child) {
     margin-bottom: 10px;
 }
+@media screen and (width < 767px) {
+  .under-list-2,
+  .under-list-3 {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .under-list-2 *,
+  .under-list-3 * {
+    font-size: 14px;
+  }
+}
+
+
+
+
 .under-list-3 {
     counter-reset: number;
 }
@@ -822,7 +852,9 @@ line-height: 1.2em;
   .under-business-company-txt:not(:last-child) {
     margin-bottom: 30px;
   }
-  }
+}
+
+
 /*-------------
 吉見グループについて
 -------------*/
@@ -917,6 +949,15 @@ section#areas {
   }
 }
 
+
+.under-section-1__inner_philosophy {
+  margin-bottom: 150px;
+}
+@media screen and (width < 767px) {
+  .under-section-1__inner_philosophy {
+    margin-bottom: 90px;
+  }
+}  
 
 .under-vision-list {
     text-align: center;
@@ -1366,6 +1407,16 @@ section#access {
 .under-privacy-intro {
     margin-bottom: 86px;
 }
+@media screen and (width < 767px) {
+  .under-privacy-declaration {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+  .under-privacy-intro {
+    font-size: 14px;
+    margin-bottom: 70px;
+  }
+}
 
 .under-privacy-list {
     display: flex;
@@ -1397,9 +1448,6 @@ section#access {
   left: 0;
 }
 
-.under-privacy-inner-list-4-item-txt {
-}
-
 .under-privacy-contact {
     margin-top: 30px;
 }
@@ -1413,6 +1461,25 @@ section#access {
     font-weight: 700;
 }
 
+@media screen and (width < 767px) {
+  .under-privacy-list {
+    gap: 60px;
+  }
+
+  .under-privacy-list-item-info {
+    font-size: 14px;  
+  }
+  .under-privacy-inner-list-4-item-ti {
+    font-size: 16px;
+  }
+
+  .under-privacy-inner-list-4-item-txt {
+    font-size: 14px;
+  }
+  .under-privacy-contact-info * {
+    font-size: 14px;
+  }
+}
 
 /*お問い合わせ*/
 /* -------------------
@@ -1484,14 +1551,17 @@ section#access {
   color: var(--color-brand);
   line-height: 1em;
 }
-@media screen and (max-width: 750px) {
-  .under-contact-steps__col__label {
-    font-size: 0.8rem;
-  }
-}
+
 .under-contact-steps__col.is-active .under-contact-steps__col__number {
   background: var(--color-brand);
   color: #fff;
+}
+@media screen and (width < 767px) {
+  .under-contact-steps__col__number {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
 }
 
 .under-contact__message {
@@ -1503,20 +1573,42 @@ section#access {
   margin-top: 2em;
 }
 .under-contact__message--send {
-    font-size: 32px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 70px;
 }
+.under-contact__message--send span {
+  display: inline-block;
+  font-size: 32px;
+}
+
 .send .under-contact__message {
     width: fit-content;
 }
-.under-contact-list {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    margin-bottom: 80px;
+
+@media screen and (width < 767px) {
+  .under-contact__message {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  .under-contact__note {
+    font-size: 14px;
+  }
+  .under-contact__message--send {
+    margin-bottom: 50px;
+  }
+  .under-contact__message--send span {
+    font-size: 20px;
+  }
 }
+
+.under-contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  margin-bottom: 80px;
+}
+
 .under-contact-list-pro {
     width: 33%;
     display: flex;
@@ -1569,6 +1661,38 @@ font-size: 1.0rem;
   field-sizing: content;
 }
 
+
+@media screen and (width < 767px) {
+  .under-contact-list {
+    flex-direction: column;
+    margin-bottom: 40px;
+    row-gap: 0px;
+
+  }
+  .under-contact-list-pro {
+    width: 100%;
+    padding: 1rem 1rem 1rem 0px;
+  }
+  .under-contact-list-val {
+    width: 100%;
+  }
+  .under-contact-list-val:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  .confirm .under-contact-list-val input,
+  .confirm .under-contact-list-val select,
+  .confirm .under-contact-list-val textarea {
+    height: 1.6em;
+    line-height: 1em;
+    padding: 0 0px;
+    overflow: visible;
+  }
+  .confirm .under-contact-list-val textarea {
+    height: auto;
+    line-height: 1.8em;
+  }
+}
 .under-contact-privacy-link {
   text-align: center;
   margin-bottom: 20px;
@@ -1598,7 +1722,6 @@ font-size: 1.0rem;
 }
 .under-contact-box .btn--blue input,
 .under-contact-box .btn--blue span {
-
   width: 100%;
   height: 100%;
   padding: 19px 19px 19px 1.5em;
@@ -1649,13 +1772,43 @@ font-size: 1.0rem;
   width: 386px;
   margin: auto;
 }
-
 .confirm .required {
   display: none;
 }
-.under-contact-box .confirm input {
-}
+@media screen and (width < 767px) {
+  .under-contact-privacy-link {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .confirm .under-contact-submit {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .under-contact-box .btn--blue,
+  .under-contact-box .confirm .btn--blue {
+    width: 250px;
+    height: 50px;
+    margin: auto;
+  }
 
+  .under-contact-box .btn--blue input,
+  .under-contact-box .btn--blue span {
+    width: 100%;
+    height: 100%;
+    padding: 14px 14px 14px 1.5em;
+    font-size: 15px;
+    line-height: 1em;
+  }
+  .under-contact-box .btn--blue::after {
+    width: 25px;
+    height: 25px;
+    right: 12px;
+    top:11px;
+  }
+  .recapticha-space {
+    margin-bottom: 30px;
+  }
+}
 
 /*サステイナビリティ*/
 .under-txt-1-col2 {
