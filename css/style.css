@@ -714,6 +714,12 @@ header.is-hidden {
     font-size: 64px;
   }
 }
+@media (width <= 767px) {
+  .hero__path-text text,
+  .hero__path-text textPath {
+    font-size: 52px;
+  }
+}
 
 .hero__title {
   position: relative;

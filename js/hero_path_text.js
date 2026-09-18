@@ -1,11 +1,11 @@
-const svg = document.querySelector('.hero__path-text');
-const bg = document.getElementById('heroSloganBg');
-const path = document.getElementById('heroSloganPath');
-const textEl = document.getElementById('heroSloganText');
-const textPath = document.getElementById('heroSloganTextPath');
+const svg = document.querySelector(".hero__path-text");
+const bg = document.getElementById("heroSloganBg");
+const path = document.getElementById("heroSloganPath");
+const textEl = document.getElementById("heroSloganText");
+const textPath = document.getElementById("heroSloganTextPath");
 
 if (svg && bg && path && textEl && textPath) {
-  const PHRASE = 'Connecting People. Moving the Future. ';
+  const PHRASE = "Connecting People. Moving the Future. ";
   const COPIES = 6;
   const SPEED = 48;
   const FIGMA_W = 1512;
@@ -38,23 +38,24 @@ if (svg && bg && path && textEl && textPath) {
     }
 
     const steps = 80;
-    let bgD = 'M 0 -20';
+    let bgD = "M 0 -20";
     for (let i = 0; i <= steps; i++) {
       const x = (W * i) / steps;
       bgD += ` L ${x} ${yAtLocal(x - shiftX)}`;
     }
     bgD += ` L ${W} -20 Z`;
 
-    let pathD = '';
+    let pathD = "";
     for (let i = 0; i <= steps; i++) {
       const xLocal = (layoutW * i) / steps;
-      pathD += (i === 0 ? 'M ' : ' L ') + (shiftX + xLocal) + ' ' + yAtLocal(xLocal);
+      pathD +=
+        (i === 0 ? "M " : " L ") + (shiftX + xLocal) + " " + yAtLocal(xLocal);
     }
 
-    bg.setAttribute('d', bgD);
-    path.setAttribute('d', pathD);
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    svg.setAttribute('preserveAspectRatio', 'none');
+    bg.setAttribute("d", bgD);
+    path.setAttribute("d", pathD);
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("preserveAspectRatio", "none");
   }
 
   function measure() {
@@ -67,13 +68,13 @@ if (svg && bg && path && textEl && textPath) {
     last = now;
     if (phraseLength > 0) {
       offset = (offset + SPEED * dt) % phraseLength;
-      textPath.setAttribute('startOffset', String(-offset));
+      textPath.setAttribute("startOffset", String(-offset));
     }
     requestAnimationFrame(tick);
   }
 
   function start() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (running) return;
     running = true;
     last = performance.now();
@@ -85,9 +86,10 @@ if (svg && bg && path && textEl && textPath) {
     measure();
   }
 
-  const fontsReady = document.fonts && document.fonts.ready
-    ? document.fonts.ready
-    : Promise.resolve();
+  const fontsReady =
+    document.fonts && document.fonts.ready
+      ? document.fonts.ready
+      : Promise.resolve();
 
   fontsReady.then(() => {
     refresh();
@@ -97,6 +99,6 @@ if (svg && bg && path && textEl && textPath) {
   if (window.ResizeObserver) {
     new ResizeObserver(refresh).observe(svg);
   } else {
-    window.addEventListener('resize', refresh);
+    window.addEventListener("resize", refresh);
   }
 }
