@@ -2210,3 +2210,10 @@ header.is-hidden {
 .fixBnr__img {
   max-width: 40vw;
 }
+
+@media (width < 1000px) {
+  .fixBnr {
+    bottom: 10px;
+    right: 10px;
+  }
+}
