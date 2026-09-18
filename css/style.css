@@ -391,6 +391,17 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
+@media (width <= 767px) {
+  .btn--white,
+  .btn--blue {
+    min-width: 180px;
+  }
+  .btn--white__text,
+  .btn--blue__text {
+    font-size: 14px;
+  }
+}
+
 /* ========================================
   Header
   ======================================== */
@@ -891,7 +902,7 @@ header.is-hidden {
     justify-content: center;
   }
   .top-about__img {
-    max-width: 80%;
+    max-width: 100%;
     margin-inline: auto;
   }
   .top-aboutList-wrap {
@@ -916,11 +927,13 @@ header.is-hidden {
 
 @media (width <= 520px) {
   .top-aboutList__item {
-    width: 180px;
+    width: 200px;
     height: 64px;
     margin-right: 10px;
   }
-
+  .top-aboutList__btn {
+    padding: 8px 5px;
+  }
   .top-aboutList__img {
     max-height: 48px;
   }
