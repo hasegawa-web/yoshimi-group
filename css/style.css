@@ -159,7 +159,7 @@ i {
 :root {
   --color-brand: #326698;
   --color-brand-dark: #053e69;
-  --color-bland-light: #EAF4FE;
+  --color-bland-light: #eaf4fe;
   --color-text: #242424;
   --color-white: #ffffff;
   --font-en: "Figtree", sans-serif;
@@ -184,6 +184,17 @@ body {
   object-position: top;
 }
 
+@media (width < 1000px) {
+  .is-pc-1000 {
+    display: none;
+  }
+}
+
+@media (width >= 1000px) {
+  .is-sp-1000 {
+    display: none;
+  }
+}
 /* ========================================
   Components
    ======================================== */
@@ -241,13 +252,11 @@ body {
   transition: background 0.2s ease-in-out;
 }
 
-
 .btn--blue[target="_blank"]::after {
   background:
-  url("../images/common/icon-outer_blue.svg") no-repeat center center,
-  var(--color-white);
+    url("../images/common/icon-outer_blue.svg") no-repeat center center,
+    var(--color-white);
 }
-
 
 .btn--white:hover::after {
   background:
@@ -255,13 +264,11 @@ body {
     var(--color-brand);
 }
 
-
 .btn--blue[target="_blank"]:hover::after {
   background:
-  url("../images/common/icon-outer_white.svg") no-repeat center center,
-  var(--color-brand);
+    url("../images/common/icon-outer_white.svg") no-repeat center center,
+    var(--color-brand);
 }
-
 
 .btn--white__text {
   color: var(--color-white);
@@ -326,8 +333,8 @@ body {
 
 .btn--blue[target="_blank"]::after {
   background:
-  url("../images/common/icon-outer_white.svg") no-repeat center center,
-  var(--color-brand);
+    url("../images/common/icon-outer_white.svg") no-repeat center center,
+    var(--color-brand);
 }
 
 .btn--blue:hover::after {
@@ -338,8 +345,8 @@ body {
 
 .btn--blue[target="_blank"]:hover::after {
   background:
-  url("../images/common/icon-outer_blue.svg") no-repeat center center,
-  var(--color-white);
+    url("../images/common/icon-outer_blue.svg") no-repeat center center,
+    var(--color-white);
 }
 
 .btn--blue__text {
@@ -356,7 +363,6 @@ body {
 .btn--blue:hover .btn--blue__text {
   color: var(--color-white);
 }
-
 
 .anchorBtn--blue {
   display: flex;
@@ -379,7 +385,9 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: url("../images/common/arrow2_white.svg") no-repeat center center, var(--color-brand);
+  background:
+    url("../images/common/arrow2_white.svg") no-repeat center center,
+    var(--color-brand);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -458,8 +466,6 @@ header.is-hidden {
   border: 1px solid #fff;
 }
 
-
-
 @media (width >= 1060px) {
   .gnav__btn {
     display: none;
@@ -485,7 +491,9 @@ header.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
   header.is-hidden .gnav {
     opacity: 0;
@@ -560,6 +568,7 @@ header.is-hidden {
 
 .top-about__img {
   --reveal-delay: 0.2s;
+  max-width: 40vw;
 }
 
 .is-inview .top-about__img {
@@ -718,6 +727,15 @@ header.is-hidden {
   text-align: center;
 }
 
+@media (width <= 767px) {
+  .hero__title {
+    font-size: 38px;
+  }
+  .hero__catch {
+    font-size: 16px;
+  }
+}
+
 .top-about {
   padding-bottom: 100px;
   position: relative;
@@ -832,7 +850,6 @@ header.is-hidden {
   }
 }
 
-
 @keyframes top-about-marquee {
   from {
     transform: translateX(0);
@@ -856,7 +873,33 @@ header.is-hidden {
   }
 }
 
+@media (width <= 1000px) {
+  .top-about__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .top-about__title {
+    font-size: 38px;
+    text-align: center;
+  }
+  .top-about__text {
+    font-size: 18px;
+  }
+  .top-about .btnList {
+    justify-content: center;
+  }
+  .top-about__img {
+    max-width: 80%;
+    margin-inline: auto;
+  }
+}
+
 @media (width <= 767px) {
+  .top-about__title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
   .top-aboutList__item {
     width: 220px;
     height: 84px;
@@ -866,7 +909,6 @@ header.is-hidden {
     max-height: 56px;
   }
 }
-
 
 /* ========================================
   Company modal
@@ -1262,11 +1304,16 @@ header.is-hidden {
   padding-bottom: 0.1em;
   padding-right: 0.2em;
   background: #326698;
-  background: linear-gradient(90deg,rgba(50, 102, 152, 1) 0%, rgba(80, 171, 186, 1) 41%, rgba(50, 102, 152, 1) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: fit-content;
+  background: linear-gradient(
+    90deg,
+    rgba(50, 102, 152, 1) 0%,
+    rgba(80, 171, 186, 1) 41%,
+    rgba(50, 102, 152, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
 
 .top-h2--ja {
@@ -1275,7 +1322,7 @@ header.is-hidden {
   line-height: 1em;
   letter-spacing: 0.1em;
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .top-h2--ja::before {
@@ -1287,10 +1334,23 @@ header.is-hidden {
   background-color: var(--color-brand);
 }
 
+@media (width <= 767px) {
+  .top-h2 {
+    margin-bottom: 40px;
+    gap: 10px;
+  }
+  .top-h2--en {
+    font-size: 38px;
+  }
+  .top-h2--ja {
+    font-size: 28px;
+    gap: 10px;
+  }
+}
+
 .top-inNumbers .anchorBtn--blue {
   margin-left: auto;
 }
-
 
 .top-inNumbersList {
   display: flex;
@@ -1363,7 +1423,8 @@ header.is-hidden {
 }
 
 .top-sastainability.is-inview .top-sastainability__line-clip {
-  animation: top-sastainability-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  animation: top-sastainability-line 1s cubic-bezier(0.22, 1, 0.36, 1) 0.12s
+    both;
 }
 
 @keyframes top-sastainability-line {
@@ -1418,7 +1479,6 @@ header.is-hidden {
   margin-left: calc(50% + 200px);
 }
 
-
 .top-sastainability__text {
   margin-bottom: 30px;
 }
@@ -1465,11 +1525,11 @@ header.is-hidden {
 }
 
 .top-sastainabilityList__img {
-   width: 320px;
-   height: 222px;
-   border-radius: 20px;
-   object-fit: cover;
-   object-position: center;
+  width: 320px;
+  height: 222px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
 }
 
 @keyframes sastain-marquee-up {
@@ -1634,8 +1694,12 @@ header.is-hidden {
   background:
     url("../images/common/arrow2_blue.svg") no-repeat center,
     var(--color-white);
-  background-size: 8px 14px, auto;
-  transition: background 0.2s ease-in-out, transform 0.2s ease-in-out;
+  background-size:
+    8px 14px,
+    auto;
+  transition:
+    background 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 
 .top-companyList__link:hover::after,
@@ -1800,7 +1864,9 @@ header.is-hidden {
   display: inline-block;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
 }
 
 .fixBnr:hover {
@@ -1811,4 +1877,8 @@ header.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.fixBnr__img {
+  max-width: 40vw;
 }
