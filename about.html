@@ -10,10 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"
       rel="stylesheet"
     /> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/under_jk.css" />
@@ -29,60 +26,51 @@
         />
       </a>
       <nav class="gnav">
-        <ul class="gnavList">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+        <label for="menu-toggle" class="gnav-btn">
+          <span>MENU</span>
+        </label>
+          <ul class="gnavList">
           <li class="gnavList__content">
             <a href="about.html" class="gnavList__link">吉見グループについて</a>
           </li>
           <li class="gnavList__content">
-            <a href="business.html" class="gnavList__link"
-              >事業とグループ企業</a
-            >
+            <a href="business.html" class="gnavList__link">事業とグループ企業</a>
           </li>
           <li class="gnavList__content">
-            <a href="company.html" class="gnavList__link">企業情報</a>
+            <a href="" class="gnavList__link">企業情報</a>
           </li>
           <li class="gnavList__content">
-            <a href="sustainability.html" class="gnavList__link"
-              >サステナビリティ</a
-            >
+            <a href="" class="gnavList__link">サステナビリティ</a>
           </li>
           <li class="gnavList__content">
-            <a href="contact.html" class="gnavList__link">お問い合わせ</a>
+            <a href="" class="gnavList__link">お問い合わせ</a>
           </li>
         </ul>
       </nav>
     </header>
-    <div class="under-hero">
-      <div class="breadcrumb">
-        <div class="breadcrumb-link"><a href="/index.html">トップ</a></div>
-        <div class="breadcrumb-link breadcrumb-link-current">
-          吉見グループについて
+      <div class="under-hero">
+        <div class="breadcrumb">
+          <div class="breadcrumb-link"><a href="/index.html">トップ</a></div>
+          <div class="breadcrumb-link breadcrumb-link-current">吉見グループについて</div>
+        </div>
+        <div class="under-hero-box">
+          <h1 class="under-page-ti">
+            <div class="under-page-ti-main">About us&nbsp;</div>
+            <div class="under-page-ti-sub">吉見グループについて</div>
+          </h1>
         </div>
       </div>
-      <div class="under-hero-box">
-        <h1 class="under-page-ti">
-          <div class="under-page-ti-main">About us&nbsp;</div>
-          <div class="under-page-ti-sub">吉見グループについて</div>
-        </h1>
+      <div class="under-anchor">
+        <ul class="under-anchor-list">
+          <li class="under-anchor-list-item"><a href="#greeting"><span>ごあいさつ</span></a></li>
+          <li class="under-anchor-list-item"><a href="#philosophy"><span><i>企業理念・</i><i>行動指針</i></span></a></li>
+          <li class="under-anchor-list-item"><a href="#areas"><span>事業領域</span></a></li>
+          <li class="under-anchor-list-item"><a href="#numbers"><span><i>数字で見る</i><i>吉見グループ</i></span></a></li>
+        </ul>
       </div>
-    </div>
-    <div class="under-anchor">
-      <ul class="under-anchor-list">
-        <li class="under-anchor-list-item">
-          <a href="#greeting"><span>ごあいさつ</span></a>
-        </li>
-        <li class="under-anchor-list-item">
-          <a href="#philosophy"><span>企業理念・行動指針</span></a>
-        </li>
-        <li class="under-anchor-list-item">
-          <a href="#areas"><span>事業領域</span></a>
-        </li>
-        <li class="under-anchor-list-item">
-          <a href="#numbers"><span>数字で見る吉見グループ</span></a>
-        </li>
-      </ul>
-    </div>
-    <main>
+      <main>
       <section id="greeting" class="under-section-1">
         <div class="under-section-1__inner">
           <h2 class="under-h2-1">
@@ -90,10 +78,7 @@
             <div class="under-h2-1-main">ごあいさつ</div>
           </h2>
           <div class="under-txt-1-col1 img-president">
-            <img
-              src="images/under/about/img-01.png"
-              alt="吉見グループ株式会社 代表取締役社長 大久保直政"
-            />
+            <img src="images/under/about/img-01.png" alt="吉見グループ株式会社 代表取締役社長 大久保直政">
           </div>
           <div class="under-txt-1-col1 w083">
             <div class="under-greeting-txt">
@@ -104,27 +89,18 @@
                 これからの吉見グループは、「変革とカイゼン」の姿勢をさらに加速させます。物流や食品流通で培った強みを磨きながら、新しい技術、新しいサービス、新しい事業に積極的に挑戦し、これまでにない価値を生み出してまいります。そして次の成長ステージとして、日本国内にとどまらず海外へもフィールドを広げ、地域で培った力を世界につなげていきたいと考えています。
               </p>
               <p>
-                <span class="txtB"
-                  >一粒の麦から、より大きな実りへ。<br />
-                  地域から日本へ、そして世界へ。</span
-                >
-              </p>
+                <span class="txtB">一粒の麦から、より大きな実りへ。<br>
+                地域から日本へ、そして世界へ。</span></p>
               <p>
                 吉見グループは、次の100年も挑戦を楽しみながら、皆様とともに新しい未来を創ってまいります。
               </p>
             </div>
             <div class="president-sign">
-              <img
-                src="images/under/about/president-name.svg"
-                alt="吉見グループ株式会社 代表取締役社長 大久保直政"
-              />
+              <img src="images/under/about/president-name.svg" alt="吉見グループ株式会社 代表取締役社長 大久保直政">
             </div>
           </div>
           <div class="greeting-poem">
-            <img src="images/under/about/img-02.png" alt="" />
-            <aside class="greeting-poem__aside">
-              初代大久保一が撒いた「一粒の麦」により、人とつながり、縁がつながり、今日の吉見グループを創ってまいりました。
-            </aside>
+            <img src="images/under/about/img-02.png" alt="">
           </div>
         </div>
       </section>
@@ -145,6 +121,7 @@
               <li>2.　努力を重ね、お客様に盡す</li>
               <li>3.　誠実に地域社会に盡す</li>
             </ol>
+
           </div>
         </div>
         <div class="under-section-1__inner">
@@ -154,36 +131,23 @@
           </h3>
           <div class="under-vision-box">
             <dl class="under-vision-list">
-              <dt class="under-vision-ti">企業理念</dt>
+              <dt class="under-vision-ti"><span>企業理念</span></dt>
               <dd class="under-vision-txt">
-                <p class="under-vision-txt-main">
-                  <span>地域産業プロデュースにより、</span
-                  ><span>豊かさと夢を実現させる</span>
-                </p>
+                <p class="under-vision-txt-main"><span>地域産業プロデュースにより、</span><span>豊かさと夢を実現させる</span></p>
               </dd>
-              <dt class="under-vision-ti">経営理念</dt>
+              <dt class="under-vision-ti"><span>経営理念</span></dt>
               <dd class="under-vision-txt">
                 <p class="under-vision-txt-main"><span>変革とカイゼン</span></p>
-                <p class="under-vision-txt-sub">
-                  <span>～どの時代にもどの領域においても</span
-                  ><span>選ばれる企業体へ～</span>
-                </p>
+                <p class="under-vision-txt-sub"><span>～どの時代にもどの領域においても</span><span>選ばれる企業体へ～</span></p>
               </dd>
-              <dt class="under-vision-ti">グループビジョン</dt>
+              <dt class="under-vision-ti"><span>グループビジョン</span></dt>
               <dd class="under-vision-txt">
-                <p class="under-vision-txt-main">
-                  <span>エリアリーディング</span><span>カンパニーを目指す</span>
-                </p>
+                <p class="under-vision-txt-main"><span>エリアリーディング</span><span>カンパニーを目指す</span></p>
               </dd>
-              <dt class="under-vision-ti">人事理念</dt>
+              <dt class="under-vision-ti"><span>人事理念</span></dt>
               <dd class="under-vision-txt">
-                <p class="under-vision-txt-main">
-                  <span>挑戦する人材を創造</span>
-                </p>
-                <p class="under-vision-txt-sub">
-                  <span>～経営目標を達成し</span
-                  ><span>企業の継続的発展へ～</span>
-                </p>
+                <p class="under-vision-txt-main"><span>挑戦する人材を創造</span></p>
+                <p class="under-vision-txt-sub"><span>～経営目標を達成し</span><span>企業の継続的発展へ～</span></p>
               </dd>
             </dl>
           </div>
@@ -197,67 +161,50 @@
           </h2>
           <div class="under-areas-box">
             <h3 class="under-areas-ti">地域とともに、新たな価値を創造する。</h3>
-            <div class="under-areas-txt">
-              吉見グループは、物流事業を中核に、人材サービス・不動産・パレット製造など多様な事業を展開しています。培ってきた信頼とグループの総合力を活かし、地域社会とともに歩みながら、新たな価値を創造し、持続的な発展に貢献してまいります。
-            </div>
+            <div class="under-areas-txt">吉見グループは、物流事業を中核に、人材サービス・不動産・パレット製造など多様な事業を展開しています。培ってきた信頼とグループの総合力を活かし、地域社会とともに歩みながら、新たな価値を創造し、持続的な発展に貢献してまいります。</div>
           </div>
           <div class="under-areas-graph">
-            <img src="images/common/group_img.svg" alt="事業領域" />
+            <img src="images/common/group_img.svg" alt="事業領域">
           </div>
           <ul class="under-areas-list">
             <li class="under-areas-list-item">
               <h4 class="under-areas-list-item-ti">物流事業</h4>
-              <img
-                src="images/under/about/ill-1-logistics.svg"
-                alt="物流事業"
-              />
+              <img src="images/under/about/ill-1-logistics.svg" alt="物流事業">
               <div class="under-areas-list-item-txt">
                 食品を中心に、幅広い温度帯の物流センター運営・保管・流通加工・3PLなどを通じ、流通を支えています。
               </div>
             </li>
             <li class="under-areas-list-item">
               <h4 class="under-areas-list-item-ti">人材事業</h4>
-              <img
-                src="images/under/about/ill-2-resources.svg"
-                alt="人材事業"
-              />
+              <img src="images/under/about/ill-2-resources.svg" alt="人材事業">
               <div class="under-areas-list-item-txt">
                 企業と人をつなぎ、人材派遣・職業紹介・業務請負・特定技能などを通じ、企業と地域の発展を支えています。
               </div>
             </li>
             <li class="under-areas-list-item">
               <h4 class="under-areas-list-item-ti">海外戦略事業</h4>
-              <img
-                src="images/under/about/ill-6-global.svg"
-                alt="海外戦略事業"
-              />
+              <img src="images/under/about/ill-6-global.svg" alt="海外戦略事業">
               <div class="under-areas-list-item-txt">
                 「美味しいを届けたくて」を信念に、国内外の産地・食材を発掘し、生産者とお客様をつなぎ、食を届けています。
               </div>
             </li>
             <li class="under-areas-list-item">
               <h4 class="under-areas-list-item-ti">製造事業</h4>
-              <img
-                src="images/under/about/ill-4-manufacturing.svg"
-                alt="製造事業"
-              />
+              <img src="images/under/about/ill-4-manufacturing.svg" alt="製造事業">
               <div class="under-areas-list-item-txt">
                 木材や各種資材を活用したものづくりを通じ、木製パレットなどの製品を製造・供給し、産業活動を支えています。
               </div>
             </li>
             <li class="under-areas-list-item">
               <h4 class="under-areas-list-item-ti">不動産事業</h4>
-              <img src="images/under/about/ill-3-estate.svg" alt="不動産事業" />
+              <img src="images/under/about/ill-3-estate.svg" alt="不動産事業">
               <div class="under-areas-list-item-txt">
                 地域に根差し、売買・賃貸・管理などの不動産サービスを通じて、土地や建物の価値を活かし、暮らしを支えています。
               </div>
             </li>
             <li class="under-areas-list-item">
               <h4 class="under-areas-list-item-ti">グループ支援事業</h4>
-              <img
-                src="images/under/about/ill-5-shared.svg"
-                alt="グループ支援事業"
-              />
+              <img src="images/under/about/ill-5-shared.svg" alt="グループ支援事業">
               <div class="under-areas-list-item-txt">
                 グループ各社の事業活動を支え、経営基盤の強化や資産活用を通じて、グループ全体の安定と発展に貢献しています。
               </div>
@@ -273,116 +220,89 @@
           </h2>
           <div class="under-numbers-box">
             <ul class="under-numbers-list">
-              <li class="under-numbers-list-item">
-                <div class="under-numbers-list-item-img">
-                  <img src="images/under/about/img-03.svg" alt="創業102年" />
+              <li class="under-numbers-list-item under-numbers-founding">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-03-num.png" alt="創業102年">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-03.png" alt="創業102年">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
-                    <img
-                      src="images/under/about/img-03-num.png"
-                      alt="創業102年"
-                    />
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
+                    <img src="images/under/about/img-03-num.png" alt="創業102年">
                   </h3>
-                  <div class="under-numbers-list-item-txt">
-                    大正13年の創業以来、100年以上にわたり信頼と実績を積み重ねてきました。
-                  </div>
-                  <div class="under-numbers-list-item-link">
-                    <a class="btn--blue" href="#" target="_blank"
-                      ><span class="btn--blue__text">100周年特設サイト</span></a
-                    >
-                  </div>
+                  <div class="under-numbers-list-item-txt">大正13年の創業以来、100年以上にわたり信頼と実績を積み重ねてきました。</div>
+                  <div class="under-numbers-list-item-link"><a class="btn--blue" href="#" target="_blank"><span
+                    class="btn--blue__text">100周年特設サイト</span></a></div>
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-employee">
-                <div class="under-numbers-list-item-img">
-                  <img
-                    src="images/under/about/img-04.png"
-                    alt="従業員数1,024名"
-                  />
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-04-num.png" alt="従業員数1,024名">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-04.png" alt="従業員数1,024名">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
-                    <img
-                      src="images/under/about/img-04-num.png"
-                      alt="従業員数1,024名"
-                    />
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
+                    <img src="images/under/about/img-04-num.png" alt="従業員数1,024名">
                   </h3>
                   <div class="under-numbers-list-item-txt">グループ全体</div>
                 </div>
               </li>
-              <li class="under-numbers-list-item">
-                <div class="under-numbers-list-item-img">
-                  <img
-                    src="images/under/about/img-05.png"
-                    alt="グループ会社数9社"
-                  />
+              <li class="under-numbers-list-item under-numbers-group">
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-05-num.png" alt="グループ会社数9社">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-05.png" alt="グループ会社数9社">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
-                    <img
-                      src="images/under/about/img-05-num.png"
-                      alt="グループ会社数9社"
-                    />
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
+                    <img src="images/under/about/img-05-num.png" alt="グループ会社数9社">
                   </h3>
                   <div class="under-numbers-list-item-txt">※2026年8月時点</div>
-                  <div class="under-numbers-list-item-link">
-                    <a class="btn--blue" href="business.html" target="_blank"
-                      ><span class="btn--blue__text"
-                        >事業とグループ企業</span
-                      ></a
-                    >
-                  </div>
+                  <div class="under-numbers-list-item-link"><a class="btn--blue" href="business.html" target="_blank"><span
+                    class="btn--blue__text">事業とグループ企業</span></a></div>
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-gender">
-                <div class="under-numbers-list-item-img">
-                  <img
-                    src="images/under/about/img-06.png"
-                    alt="男女比 （男性）35.5：（女性）64.5"
-                  />
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-06-num.png" alt="男女比 （男性）35.5：（女性）64.5">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-06.png" alt="男女比 （男性）35.5：（女性）64.5">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
-                    <img
-                      src="images/under/about/img-06-num.png"
-                      alt="男女比 （男性）35.5：（女性）64.5"
-                    />
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
+                    <img src="images/under/about/img-06-num.png" alt="男女比 （男性）35.5：（女性）64.5">
                   </h3>
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-holiday">
-                <div class="under-numbers-list-item-img">
-                  <img
-                    src="images/under/about/img-07.png"
-                    alt="年間休日125日"
-                  />
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-07-num.png" alt="年間休日125日">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-07.png" alt="年間休日125日">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
-                    <img
-                      src="images/under/about/img-07-num.png"
-                      alt="年間休日125日"
-                    />
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
+                    <img src="images/under/about/img-07-num.png" alt="年間休日125日">
                   </h3>
-                  <div class="under-numbers-list-item-txt">
-                    ワークライフバランスを大切にし、プライベートも充実できる環境を整えています。
-                  </div>
+                  <div class="under-numbers-list-item-txt">ワークライフバランスを大切にし、プライベートも充実できる環境を整えています。</div>
                 </div>
               </li>
               <li class="under-numbers-list-item under-numbers-ratio">
-                <div class="under-numbers-list-item-img">
-                  <img
-                    src="images/under/about/img-08.png"
-                    alt="業種比率 物流：62% 人材：10%"
-                  />
+                <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-sp">
+                  <img src="images/under/about/img-08-num.png" alt="業種比率 物流：62% 人材：10% 製造：8% その他：20%">
+                </h3>
+              <div class="under-numbers-list-item-img">
+                  <img src="images/under/about/img-08.png" alt="業種比率 物流：62% 人材：10%">
                 </div>
                 <div class="under-numbers-list-item-info">
-                  <h3 class="under-numbers-list-item-ti">
-                    <img
-                      src="images/under/about/img-08-num.png"
-                      alt="業種比率 物流：62% 人材：10% 製造：8% その他：20%"
-                    />
+                  <h3 class="under-numbers-list-item-ti under-numbers-list-item-ti-pc">
+                    <img src="images/under/about/img-08-num.png" alt="業種比率 物流：62% 人材：10% 製造：8% その他：20%">
                   </h3>
                 </div>
               </li>
@@ -395,10 +315,7 @@
           <li class="bottom-link-list-item">
             <a href="/company/">
               <div class="bottom-link-list-img">
-                <img
-                  src="images/common/bottom_link/bottom_link_company.png"
-                  alt="企業情報"
-                />
+                <img src="images/common/bottom_link/bottom_link_company.png" alt="企業情報">
               </div>
               <div class="bottom-link-list-item-info">
                 <div class="bottom-link-list-item-info-main">Company</div>
@@ -409,24 +326,17 @@
           <li class="bottom-link-list-item">
             <a href="/about/">
               <div class="bottom-link-list-img">
-                <img
-                  src="images/common/bottom_link/bottom_link_business.png"
-                  alt="事業とグループ企業"
-                />
+                <img src="images/common/bottom_link/bottom_link_business.png" alt="事業とグループ企業">
               </div>
               <div class="bottom-link-list-item-info">
-                <div class="bottom-link-list-item-info-main">
-                  Business＆Group
-                </div>
-                <div class="bottom-link-list-item-info-sub">
-                  事業とグループ企業
-                </div>
+                <div class="bottom-link-list-item-info-main">Business＆Group</div>
+                <div class="bottom-link-list-item-info-sub">事業とグループ企業</div>
               </div>
             </a>
           </li>
         </ul>
       </div>
-    </main>
+      </main>
 
     <footer class="footer" id="contact">
       <div class="footer__inner">
@@ -445,21 +355,18 @@
             />
           </a>
           <p class="footer__address">
-            〒360-0024　埼玉県熊谷市問屋町2-4-18　<span
-              class="footer__address--ib"
-              >ソシオ熊谷情報センタービル5F</span
-            ><br />TEL:048-528-3300　FAX:048-528-3302
+            〒360-0024　埼玉県熊谷市問屋町2-4-18　ソシオ熊谷情報センタービル5F<br />TEL:048-528-3300　FAX:048-528-3302
           </p>
         </div>
         <nav class="footer__nav" aria-label="フッターナビゲーション">
           <ul>
             <li><a href="about.html">吉見グループについて</a></li>
             <li><a href="business.html">事業とグループ企業</a></li>
-            <li><a href="company.html">企業情報</a></li>
-            <li><a href="sustainability.html">サステナビリティ</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
-            <li><a href="privacy.html">プライバシーポリシー</a></li>
-            <li><a href="" target="_blank">創業100周年特設サイト</a></li>
+            <li><a href="">企業情報</a></li>
+            <li><a href="">サステナビリティ</a></li>
+            <li><a href="">お問い合わせ</a></li>
+            <li><a href="">プライバシーポリシー</a></li>
+            <li><a href="">創業100周年特設サイト</a></li>
           </ul>
         </nav>
       </div>
@@ -467,6 +374,38 @@
         Copyright © 吉見グループ株式会社. All Rights Reserved.
       </p>
     </footer>
+    <dialog
+      class="company-modal"
+      id="companyModal"
+      aria-labelledby="companyModalTitle"
+    >
+      <div class="company-modal__panel">
+        <button
+          type="button"
+          class="company-modal__close"
+          id="companyModalClose"
+          aria-label="閉じる"
+        ></button>
+        <div class="company-modal__logo">
+          <img id="companyModalLogo" alt="" />
+        </div>
+        <div class="company-modal__body">
+          <p class="company-modal__category" id="companyModalCategory"></p>
+          <h3 class="company-modal__name" id="companyModalTitle"></h3>
+          <p class="company-modal__desc">
+            <span id="companyModalDesc"></span>
+          </p>
+          <a
+            class="btn--blue company-modal__link"
+            id="companyModalLink"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="btn--blue__text">公式ウェブサイト</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
     <script src="js/header.js"></script>
   </body>
 </html>
