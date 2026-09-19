@@ -64,7 +64,8 @@ html {
 /*-------------
 下層共通
 -------------*/
-body.under {
+/* body.under { */
+.under * {
 /* overflow: hidden; */
 line-height: 1.8em;
 }
@@ -91,9 +92,16 @@ body.under::before {
 }
 @media screen and (width < 767px) {
   .under * {
-    /* font-size: 14px; */
+    font-size: 14px;
     /* line-height: 1.8em; */
+  }
+  p.footer__slogan {
+    font-size: 32px;
+    line-height: 1;
     }
+  p.footer__catch {
+      font-size: 20px;
+  }
 }
 
 .under main {
@@ -544,9 +552,6 @@ line-height: 1.2em;
   .under-list-1-item {
     font-size: 14px;
   }
-  .under-list-1-item::before {
-    top: calc(1.2em - 2px);
-  }
 }
 .under-list-2,
 .under-list-3 {
@@ -797,6 +802,9 @@ line-height: 1.2em;
   .under-business-company-list-item-logo {
     aspect-ratio: 100 / 52.3;
     border-radius: 10px;
+  }
+  .under-business-company-link * {
+    font-size: 16px;
   }
 }
 
@@ -1186,6 +1194,9 @@ section#areas {
   .under-numbers-list-item-txt {
     font-size: 14px;
   }
+  .under-numbers-list-item-link * {
+    font-size: 16px;
+  }
   .under-numbers-list-item-link .btn--blue {
     margin: auto;
   }
@@ -1252,6 +1263,7 @@ section#access {
     display: flex;
     flex-wrap: wrap;
 }
+
 .under-company-profile-list-pro {
     display: flex;
     align-items: center;
@@ -1294,6 +1306,9 @@ section#access {
   .under-company-profile-list {
     display: block;
   }
+  .under-company-profile-list * {
+    font-size: 16px;
+  }  
   .under-company-profile-list-pro {
     display: block;
     width: 100%;
@@ -1540,6 +1555,7 @@ section#access {
   font-weight: bold;
   color: var(--color-brand);
   margin-bottom: 12px;
+  line-height: 2em;
 }
 .under-contact-steps__col__label {
   position: relative;
@@ -1599,6 +1615,9 @@ section#access {
   }
   .under-contact__message--send span {
     font-size: 20px;
+  }
+  .under-contact-steps__col__label {
+    font-size: 16px;
   }
 }
 
@@ -1672,6 +1691,9 @@ font-size: 1.0rem;
   .under-contact-list-pro {
     width: 100%;
     padding: 1rem 1rem 1rem 0px;
+  }
+  .under-contact-list-pro * {
+    font-size: 16px;
   }
   .under-contact-list-val {
     width: 100%;
