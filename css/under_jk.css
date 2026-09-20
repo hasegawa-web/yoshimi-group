@@ -12,6 +12,18 @@ html {
     /* scroll-padding-top: 150px; */
 }
 
+@media (width < 768px) {
+  .is-pc-768 {
+    display: none !important;
+  }
+}
+
+@media (width >= 768px) {
+  .is-sp-768 {
+    display: none !important;
+  }
+}
+
 /*ナビゲーション スマホ対応*/
 .menu-toggle {
   position: absolute;
@@ -448,6 +460,7 @@ line-height: 1.2em;
     font-size: 14px;
   } */
 }
+
 /*共通 H2タイトル*/
 .under-h2-1 {
     margin-bottom: 64px;
@@ -765,12 +778,19 @@ line-height: 1.2em;
   .bottom-link-list-item {
     width: 100%;
   }
+  .bottom-link-list-img {
+    height: 45.8vw;
+  }
+  .bottom-link-list-img img {
+    height: fit-content;
+  }
+
   .bottom-link-list-item-info-main {
     font-size: 8.1vw;
-}
-.bottom-link-list-item-info-sub {
+  }
+  .bottom-link-list-item-info-sub {
     font-size: 4vw;
-}
+  }
 }
 
 /*幅*/
