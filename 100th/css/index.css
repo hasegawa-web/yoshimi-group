@@ -1,0 +1,761 @@
+@charset "utf-8";
+
+/* =====================================================================
+	common.css
+===================================================================== */
+
+/* ----------------------------------------------------------------------
+ * 全デバイス共通
+ * ---------------------------------------------------------------------- */
+
+/*
+ * common
+ * ===================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+html {
+	font-size: 62.5%;
+	-webkit-text-size-adjust: none;
+	letter-spacing: .01rem;
+}
+body {
+	font-family: "游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
+	color: #333;
+	text-align: justify;
+	margin: 0;
+}
+body.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	color: #0078b9;
+}
+a:hover { color: #00afd9; }
+
+/* webFont ------------------------------ */
+.notoSerif {
+	font-family: 'Noto Serif JP', serif;
+}
+.cormorantInfant {
+	font-family: 'Cormorant Infant', serif;
+	font-weight: 400;
+}
+
+
+/*
+ * layout
+ * ===================================================================== */
+
+/* #container ------------------------------ */
+#container {
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+}
+
+/* #gHeader ------------------------------ */
+#gHeader {
+	box-sizing: border-box;
+	padding: 35px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+#gHeader.scroll {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	transform: translateY(-100%);
+	animation: header .3s ease-out forwards;
+}
+@keyframes header {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+#gHeader h1 {
+	width: 300px;
+	margin: 0 20px 0 0;
+}
+/* #menu */
+#menu {
+	margin-top: -12px;
+	width: 60px;
+	height: 60px;
+	position: relative;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#menu span {
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #000033;
+}
+#menu span:nth-child(2) {
+	top: 13px;
+}
+/* #menuBox ------------------------------ */
+#menuBox {
+	width: 80%;
+	height: 100%;
+	position: fixed;
+	left: 20%;
+	top: 0;
+	color: #fff;
+	overflow: auto;
+	background: rgba(0,0,85,0.8);
+	z-index: 1000;
+	transition: all 1s;
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}
+#menuBox.show {
+	visibility: visible;
+	opacity: 1;
+}
+#menuBox #menuWrap {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 100%;
+	padding-right: 380px;
+	padding-left: 40px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#menuBox #menuWrap::before {
+	left: 8px;
+	right: 8px;
+	top: 8px;
+	bottom: 8px;
+	position: absolute;
+	box-sizing: border-box;
+	border: 1px solid rgba(255,255,255,0.9);
+	content: '';
+	pointer-events: none;
+	user-select: none;
+}
+#menuBox #menuSubBox {
+	width: 100%;
+	max-width: 782px;
+}
+#menuBox #menuClose {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 365px;
+	top: 23px;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: 0.3s;
+}
+#menuBox #menuClose span {
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	left: 0;
+	top: 12px;
+	background: #fff;
+	transform: translate(0, 3px) rotate(45deg);
+}
+#menuBox #menuClose span:nth-child(2) {
+	top: 17px;
+	transform: translate(0, -3px) rotate(-45deg);
+}
+
+#menuBox #menuInner {
+	box-sizing: border-box;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#menuBox #logoImg {
+	margin-top: 4px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	max-width: 386px;
+}
+/* #gNavi */
+#gNavi {
+	padding-left: 40px;
+	width: 288px;
+	box-sizing: border-box;
+}
+#gNavi #naviList li:not(:last-child) {
+	margin-bottom: 34px;
+}
+#gNavi #naviList li {
+	opacity: 0;
+	transition: .3s;
+}
+#gNavi #naviList li.show {
+	opacity: 1;
+}
+#gNavi a {
+	color: #fff;
+	transition: 0.3s;
+	text-decoration: none;
+}
+#gNavi #naviList li a {
+	position: relative;
+	display: block;
+	line-height: 1.4;
+}
+#gNavi #naviList li a::before {
+	width: 12px;
+	height: 1px;
+	position: absolute;
+	left: -34px;
+	top: 25px;
+	background: #fff;
+	opacity: 0.5;
+	content: '';
+}
+#gNavi #naviList li a > span {
+	display: block;
+}
+#gNavi #naviList li .en {
+	font-size: 3rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+#gNavi #naviList li .jp {
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+}
+/* .menufade */
+.menufade {
+	overflow: hidden;
+}
+.menufade span {
+	transform: translateY(100%);
+	display: inline-block;
+	transition: .5s;
+	transition-delay: 0s;
+}
+#menuBox li.show .menufade span {
+	transform: translateY(0);
+}
+/* #menuBox */
+#menuBox #menuPhoto {
+	width: 340px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 0;
+	background-color: #010044;
+	display: flex;
+	align-items: center;
+}
+#menuBox #menuPhoto #photo img {
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+/* #mainVisaul ------------------------------ */
+#mainVisaul {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	background-color: #fff;
+}
+#mainVisaul .videoWrapper {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	padding-top: 56.25%;
+	padding-top: 56.25%;
+}
+#mainVisaul .videoWrapper video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 100%;
+	height: auto;
+	min-width: 100%;
+	min-height: 100%;
+	transform: translate(-50%,-50%);
+}
+#leadcopy {
+	bottom: 0;
+	box-sizing: border-box;
+	background: #fff;
+	width: 100%;
+	font-family: 'Noto Serif JP', serif;
+	font-size: 2.1rem;
+	font-weight: 600;
+	line-height: 2;
+	text-align: center;
+	padding: 1em;
+}
+#leadcopy p {
+	color: rgb(0, 0, 51);
+}
+
+/* #movie ------------------------------ */
+#movie {
+	width: 100%;
+	position: relative;
+	background: #000;
+	overflow: hidden;
+	z-index: 3;
+}
+#movie .videoWrapper {
+	padding-top: 56.25%;
+	width: 100%;
+	position: relative;
+}
+#movie .videoWrapper video {
+	width: 75%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/* .topBox ------------------------------ */
+.topBox {
+	position: relative;
+	z-index: 1;
+	clip-path: inset(0);
+	padding-bottom: 100vh;
+	display: none;
+	opacity: 0;
+}
+h2 {
+	color: rgb(0, 0, 51);
+	box-sizing: border-box;
+	padding-bottom: 8vh;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+	font-family: "Cormorant Infant", serif;
+	font-size: 11rem;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	transition: opacity 0.8s ease-out;
+}
+.topBox h2 {
+	mix-blend-mode: overlay;
+	opacity: 0;
+	transition: opacity 1s;
+}
+.topBox.showTxt h2 {
+	opacity: 1;
+}
+h2 .innTxt {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	text-align: left;
+}
+h2 .en {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: -15px;
+	font-size: 2.1rem;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+	line-height: 15;
+	text-align: center;
+}
+h2 .cormorant {
+	font-family: 'Cormorant', serif;
+}
+h2.op {
+	opacity: 0.05;
+}
+h2.ab {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+}
+.topBox img {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100% !important;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transform: translateY(0);
+}
+
+/* #message ------------------------------ */
+#message {
+	padding-bottom: 360px;
+	position: relative;
+	z-index: 1;
+	background-color: #fff;
+}
+#message .topBox h2 {
+	color: #fff;
+}
+#message .content {
+	margin: 0 auto;
+	padding-top: 492px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* #history ------------------------------ */
+#history {
+	position: relative;
+	overflow: hidden;
+}
+#history .topBox h2 {
+	color: #fff;
+}
+#history .headLine01.op {
+	opacity: 0;
+}
+#history .content {
+	padding: 421px 10% 250px 10%;
+	position: relative;
+	z-index: 2;
+	max-width: 1280px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+#history .line {
+	width: 100%;
+	max-width: 1160px;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	z-index: -1;
+	user-select: none;
+	pointer-events: none;
+}
+#history .line::before {
+	width: 3px;
+	height: 100%;
+	position: absolute;
+	left: 10%;
+	top: 0;
+	background: #000;
+	content: "";
+	opacity: 0.1;
+}
+.growline {
+	transition: 0.7s;
+	max-height: 100%;
+}
+#history .yearBox {
+	margin: 0 auto -2px;
+	box-sizing: border-box;
+	position: relative;
+	width: 4em;
+	margin: 0 0 0 5%;
+	font-size: 8rem;
+	font-weight: 300;
+	line-height: 1.05;
+}
+#history .yearBox .year {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	z-index: 20;
+}
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+	font-family: 'Cormorant Infant', serif !important;
+	line-height: 1em !important;
+}
+.odometer-formatting-mark {
+	display: none !important;
+}
+#history .pos {
+	margin: 0 5% 100px calc(5% + 20rem);
+	display: flex;
+}
+.fadeInAnim {
+	opacity: 0;
+	transform: translateY(40px);
+	transition: all 1s;
+}
+.fadeInAnim.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+#history .h_pc {
+	width: 50%;
+	display: block;
+	margin-left: 300px;
+}
+
+/* #book ------------------------------ */
+#book {
+	margin: 150px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#book a {
+	display: inline-block;
+	margin: 0 auto;
+	max-width: 1920px;
+	transition: opacity .5s;
+	opacity: 1;
+}
+#book a:hover {
+	opacity: .75;
+}
+#book img {
+	margin: 0 auto;
+}
+
+/* #future ------------------------------ */
+#future {
+	position: relative;
+	margin: 0 auto 100px auto;
+}
+#future h2 {
+	margin-top: 155px;
+	margin-bottom: 155px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-weight: 400;
+	line-height: 1;
+	z-index: 2;
+	padding-top: 8vh;
+	height: initial;
+}
+#futureList {
+	list-style: none;
+	width: 100%;
+	height: 43vw;
+	display: flex;
+}
+#futureList li {
+	background-size: cover;
+	height: 100%;
+	width: 20%;
+	cursor: pointer;
+	transition: width 0.5s ease-out;
+}
+#futureList li.futureActive {
+	width: 100%;
+}
+@media (hover: hover) {
+	#futureList li:hover {
+		width: 100%;
+	}
+}
+#futureList li:nth-child(1) { background-image: url(../img/future_01.png); }
+#futureList li:nth-child(2) { background-image: url(../img/future_02.png); }
+#futureList li:nth-child(3) { background-image: url(../img/future_03.png); }
+#futureList li:nth-child(4) { background-image: url(../img/future_04.png); }
+#futureList li:nth-child(5) { background-image: url(../img/future_05.png); }
+
+
+/* footer ------------------------------ */
+footer {
+	border-top: 3px solid rgb(0, 0, 51);
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding: 1em 0 2rem 0;
+}
+
+.sp { display: none; }
+
+
+/* --------------------------------------------------
+ * 画面の横幅が1280px以上（PC）
+ * -------------------------------------------------- */
+@media screen and (min-width: 1280px){
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が1279pxまで（PC）
+ * -------------------------------------------------- */
+@media screen and (max-width: 1279px){
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が1023pxまで（PC）
+ * -------------------------------------------------- */
+@media screen and (max-width: 1023px){
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が959pxまで（タブレット端末横）
+ * -------------------------------------------------- */
+@media screen and (max-width: 959px){
+	/* #menuBox ------------------------------ */
+	#menuBox #menuClose {
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		right: 23px;
+		top: 23px;
+		opacity: 0.5;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	#menuBox #menuWrap {
+		box-sizing: border-box;
+		width: 100%;
+		min-height: 100%;
+		padding-right: 40px;
+		padding-left: 40px;
+		padding-bottom: 40px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#menuBox #menuPhoto {
+		display: none;
+	}
+	/* #mainVisaul ------------------------------ */
+	#leadcopy {
+		font-size: 1.6rem;
+	}
+	/* .topBox ------------------------------ */
+	h2 {
+		font-size: 9rem;
+	}
+	h2 .en {
+		font-size: 1.8rem;
+	}
+	/* #history ------------------------------ */
+	#history .content {
+		padding: 421px 10% 50px 10%;
+	}
+	#history .yearBox {
+		font-size: 6rem;
+	}
+	#history .pos {
+		margin: 0 2.5% 100px calc(5% + 15rem);
+	}
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が768pxまで（タブレット端末縦）
+ * -------------------------------------------------- */
+@media screen and (max-width: 768px){
+	/* #mainVisaul ------------------------------ */
+	#leadcopy {
+		font-size: 1.4rem;
+	}
+	/* #history ------------------------------ */
+	#history .yearBox {
+		font-size: 3rem;
+	}
+	#history .pos {
+		margin: 0 0 50px calc(5% + 8rem);
+	}
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が639pxまで（スマートフォン横）
+ * -------------------------------------------------- */
+@media screen and (max-width:639px){
+	/* #menuBox ------------------------------ */
+	#gNavi #naviList li .en {
+		font-size: 2rem;
+	}
+	#gNavi #naviList li .jp {
+		font-size: 1.2rem;
+	}
+	/* #mainVisaul ------------------------------ */
+	#leadcopy {
+		font-size: 1.2rem;
+	}
+	#leadcopy br.pc {
+		display: none;
+	}
+	/* .topBox ------------------------------ */
+	h2 {
+		font-size: 8rem;
+	}
+	h2 .en {
+		font-size: 1.6rem;
+	}
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が479pxまで（スマートフォン縦）
+ * -------------------------------------------------- */
+@media screen and (max-width:479px){
+	.pc { display: none; }
+	.sp { display: block; }
+	/* .topBox ------------------------------ */
+	h2 {
+		font-size: 7.5rem;
+	}
+	h2 .en {
+		font-size: 1.4rem;
+	}
+}
+
+
+/* --------------------------------------------------
+ * 画面の横幅が359pxまで（スマートフォン縦）
+ * -------------------------------------------------- */
+@media screen and (max-width:359px){
+	/* .topBox ------------------------------ */
+	h2 {
+		font-size: 6rem;
+	}
+	h2 .en {
+		font-size: 1.3rem;
+	}
+}
