@@ -14,7 +14,9 @@
     const y = Math.max(0, window.scrollY);
     const diff = y - lastY;
 
-    if (y <= threshold) {
+    if (document.body.classList.contains("is-gnav-open")) {
+      setHidden(false);
+    } else if (y <= threshold) {
       setHidden(false);
     } else if (diff > threshold) {
       setHidden(true);
