@@ -2214,7 +2214,8 @@ header.is-hidden {
   opacity: 0.7;
 }
 
-.fixBnr.is-hidden {
+.fixBnr.is-hidden,
+.fixBnr-sp.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -2224,9 +2225,51 @@ header.is-hidden {
   max-width: 40vw;
 }
 
+.fixBnr-sp {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  gap: 20px;
+  background:
+    url(../images/common/arrow2_blue.svg) no-repeat center right 20px,
+    var(--color-white);
+  border: 2px solid var(--color-brand);
+  padding: 10px;
+  width: calc(100% - 20px);
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.fixBnr-sp__img {
+  width: 70px;
+}
+
+.fixBnr-sp__txt {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-brand);
+}
+
 @media (width < 1000px) {
   .fixBnr {
     bottom: 10px;
     right: 10px;
+  }
+}
+@media (width < 767px) {
+  .fixBnr {
+    display: none;
+  }
+}
+@media (width >= 767px) {
+  .fixBnr-sp {
+    display: none;
   }
 }
