@@ -109,7 +109,7 @@ body.under::before {
   }
   p.footer__slogan {
     font-size: 32px;
-    line-height: 1;
+    line-height: 1 !important;
   }
   p.footer__catch {
     font-size: 20px;
@@ -141,6 +141,9 @@ body.under::before {
 
 .under footer {
   position: relative;
+}
+.under footer * {
+  line-height: 1.6em;
 }
 .footer__address {
   width: fit-content;
