@@ -1932,14 +1932,20 @@ section#access {
     width: 100%;
     padding: 1rem 1rem 1rem 0px;
   }
-  .under-contact-list-pro * {
+  /* .under-contact-list-pro * {
     font-size: 16px;
-  }
+  } */
   .under-contact-list-val {
     width: 100%;
   }
   .under-contact-list-val:not(:last-of-type) {
     margin-bottom: 40px;
+  }
+
+  .under-contact-list-val input,
+  .under-contact-list-val select,
+  .under-contact-list-val textarea {
+    font-size: 14px;
   }
 
   .confirm .under-contact-list-val input,
