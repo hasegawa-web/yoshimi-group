@@ -2100,6 +2100,7 @@ header.is-hidden {
 }
 .footer__nav {
   display: flex;
+  flex-direction: column;
   align-items: stretch;
   padding-left: 42px;
   border-left: 1px solid rgb(255 255 255 / 55%);
@@ -2124,7 +2125,15 @@ header.is-hidden {
   font-size: 14px;
   line-height: 1.6;
 }
-
+.footer__nav-100th {
+  display: block;
+  width: 220px;
+  margin-top: 20px;
+}
+.footer__nav-100th__img {
+  width: 100%;
+  max-width: 300px;
+}
 @media (width < 900px) {
   .footer__slogan {
     font-size: 32px;
@@ -2181,6 +2190,9 @@ header.is-hidden {
     display: block;
     width: 3px;
     background: var(--color-brand-dark);
+  }
+  .footer__nav-100th {
+    margin-inline: auto;
   }
 }
 
