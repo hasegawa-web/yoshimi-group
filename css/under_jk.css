@@ -449,6 +449,27 @@ a.link-txt {
     top: calc(50% - 7px);
   }
 }
+
+@media screen and (max-width: 580px) {
+  .under-anchor-list {
+    gap: 20px;
+  }
+  .under-anchor-list-item:nth-child(odd) a::after {
+    content: none;
+  }
+  .under-anchor-list-item {
+    width: fit-content;
+  }
+  .under-anchor-list-item a {
+    padding-left: 0px;
+  }
+  .under-anchor-list-item:nth-child(odd) a {
+    padding-right: 0px;
+  }
+  .under-anchor-list-item span {
+    padding-right: 20px;
+  }
+}
 /*リード*/
 .under-lead {
   width: var(--under-width-base);
