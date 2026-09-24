@@ -637,7 +637,7 @@ header.is-hidden {
 
 @media (width < 520px) {
   .head__logo-img {
-    width: calc(100vw - 160px);
+    width: 50vw;
   }
 }
 /* ========================================
