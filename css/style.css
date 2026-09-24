@@ -1844,7 +1844,9 @@ header.is-hidden {
   }
   .top-sastainabilityList__wrap {
     justify-content: space-between;
-    width: 120%;
+    width: 100%;
+    left: 0px;
+    transform: rotate(0deg);
   }
   .top-sastainability__text {
     margin-bottom: 20px;
@@ -1859,8 +1861,17 @@ header.is-hidden {
     --sastain-gap: 10px;
     --sastain-wrap-left: -10%;
   }
-  .top-sastainabilityList__wrap {
-    width: 130%;
+  .top-sastainabilityList__img {
+    width: 20vw;
+    height: auto;
+  }
+}
+@media (width <= 480px) {
+  .top-sastainability__inner {
+    background-color: transparent;
+  }
+  .top-sastainabilityList__mask {
+    display: none;
   }
 }
 
