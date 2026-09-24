@@ -152,6 +152,11 @@ i {
   outline: none;
 }
 
+sup {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
 /* ========================================
   Base
    ======================================== */
@@ -206,6 +211,18 @@ body {
     display: none !important;
   }
 }
+
+@media (width < 767px) {
+  .is-pc-767 {
+    display: none !important;
+  }
+}
+@media (width >= 767px) {
+  .is-sp-767 {
+    display: none !important;
+  }
+}
+
 /* ========================================
   Components
    ======================================== */
