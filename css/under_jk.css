@@ -109,7 +109,7 @@ body.under::before {
   }
   p.footer__slogan {
     font-size: 32px;
-    line-height: 1;
+    line-height: 1 !important;
   }
   p.footer__catch {
     font-size: 20px;
@@ -141,6 +141,9 @@ body.under::before {
 
 .under footer {
   position: relative;
+}
+.under footer * {
+  line-height: 1.6em;
 }
 .footer__address {
   width: fit-content;
@@ -695,6 +698,26 @@ a.link-txt {
   margin-bottom: 10px;
 }
 .under-list-3-item::before {
+  counter-increment: number;
+  content: counter(number) ".";
+  position: absolute;
+  left: 0;
+}
+.under-list-4 {
+  counter-reset: number;
+}
+.under-list-4:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.under-list-4-item {
+  padding-left: 1em;
+  position: relative;
+}
+.under-list-4-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.under-list-4-item::before {
   counter-increment: number;
   content: counter(number) ".";
   position: absolute;
@@ -1909,14 +1932,20 @@ section#access {
     width: 100%;
     padding: 1rem 1rem 1rem 0px;
   }
-  .under-contact-list-pro * {
+  /* .under-contact-list-pro * {
     font-size: 16px;
-  }
+  } */
   .under-contact-list-val {
     width: 100%;
   }
   .under-contact-list-val:not(:last-of-type) {
     margin-bottom: 40px;
+  }
+
+  .under-contact-list-val input,
+  .under-contact-list-val select,
+  .under-contact-list-val textarea {
+    font-size: 14px;
   }
 
   .confirm .under-contact-list-val input,
