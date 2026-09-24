@@ -2134,6 +2134,13 @@ header.is-hidden {
     flex-direction: column;
     margin-top: 0px;
   }
+  .top-company__content {
+    background-color: transparent;
+    padding: 0;
+  }
+  .top-company__detail-text {
+    color: var(--color-text);
+  }
   .top-companyList__item {
     width: 100%;
   }
@@ -2149,12 +2156,36 @@ header.is-hidden {
     background-size:
       1.2vw 2.1vw,
       auto;
+    background-color: var(--color-brand);
+    background-image: url(../images/common/arrow_white.svg);
   }
   .top-companyList__item:first-child {
     bottom: 0;
   }
   .top-company__inner .btn--white {
     margin-inline: auto;
+  }
+  .top-company .btn--white {
+    border: 1px solid var(--color-brand);
+  }
+  .top-company .btn--white__text {
+    color: var(--color-brand);
+  }
+  .top-company .btn--white::before {
+    background: var(--color-brand);
+  }
+  .top-company .btn--white::after {
+    background:
+      url(../images/common/arrow_white.svg) no-repeat center center,
+      var(--color-brand);
+  }
+  .top-company .btn--white:hover .btn--white__text {
+    color: var(--color-white);
+  }
+  .top-company .btn--white:hover::after {
+    background:
+      url(../images/common/arrow_blue.svg) no-repeat center center,
+      var(--color-white);
   }
 }
 
