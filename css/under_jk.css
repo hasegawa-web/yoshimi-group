@@ -579,7 +579,7 @@ a.link-txt {
 
 .under-h2-4.our-mission {
   background: url(../images/under/sustainability/img-07.png) no-repeat center
-    center;
+    center/cover;
 }
 
 .under-h2-4-sub {
