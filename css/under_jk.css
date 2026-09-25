@@ -449,6 +449,27 @@ a.link-txt {
     top: calc(50% - 7px);
   }
 }
+
+@media screen and (max-width: 580px) {
+  .under-anchor-list {
+    gap: 20px;
+  }
+  .under-anchor-list-item:nth-child(odd) a::after {
+    content: none;
+  }
+  .under-anchor-list-item {
+    width: fit-content;
+  }
+  .under-anchor-list-item a {
+    padding-left: 0px;
+  }
+  .under-anchor-list-item:nth-child(odd) a {
+    padding-right: 0px;
+  }
+  .under-anchor-list-item span {
+    padding-right: 20px;
+  }
+}
 /*リード*/
 .under-lead {
   width: var(--under-width-base);
@@ -578,7 +599,7 @@ a.link-txt {
 }
 
 .under-h2-4.our-mission {
-  background: url(../images/under/sustainability/img-07.png) no-repeat center
+  background: url(../images/under/sustainability/img-07.jpg) no-repeat center
     center/cover;
 }
 
@@ -587,6 +608,7 @@ a.link-txt {
   font-weight: 700;
   line-height: 1.2em;
   color: var(--color-white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .under-h2-4-main {
   font-size: 48px;
@@ -594,6 +616,7 @@ a.link-txt {
   line-height: 1.2em;
   letter-spacing: 0.1em;
   color: var(--color-white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .under-h3-2 {
@@ -1628,8 +1651,7 @@ section#access {
     margin-bottom: 30px;
   }
 }
-.under-company-traffic-list {
-}
+
 .under-company-traffic-list-pro {
   font-size: 20px;
   font-weight: 700;
