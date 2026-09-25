@@ -444,7 +444,9 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  transition: transform 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    background-color 0.2s ease-out;
 }
 
 header.is-hidden {
@@ -544,9 +546,15 @@ header.is-hidden {
 
 @media (width < 1060px) {
   header {
-    top: 2%;
+    top: 20px;
     left: 20px;
     width: calc(100% - 40px);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  header:has(.gnav.is-active) {
+    background-color: transparent;
   }
   .gnav {
     padding: 70px 20px 20px;
@@ -565,7 +573,7 @@ header.is-hidden {
   }
   .gnav__logo {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 20px;
     z-index: 2;
   }
@@ -653,8 +661,17 @@ header.is-hidden {
 }
 
 @media (width < 520px) {
+  header {
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+  }
   .head__logo-img {
     width: 50vw;
+  }
+  .gnav {
+    top: 0px;
+    right: 0px;
   }
 }
 /* ========================================
