@@ -599,7 +599,7 @@ a.link-txt {
 }
 
 .under-h2-4.our-mission {
-  background: url(../images/under/sustainability/img-07.png) no-repeat center
+  background: url(../images/under/sustainability/img-07.jpg) no-repeat center
     center/cover;
 }
 
@@ -608,6 +608,7 @@ a.link-txt {
   font-weight: 700;
   line-height: 1.2em;
   color: var(--color-white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .under-h2-4-main {
   font-size: 48px;
@@ -615,6 +616,7 @@ a.link-txt {
   line-height: 1.2em;
   letter-spacing: 0.1em;
   color: var(--color-white);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .under-h3-2 {
@@ -1649,8 +1651,7 @@ section#access {
     margin-bottom: 30px;
   }
 }
-.under-company-traffic-list {
-}
+
 .under-company-traffic-list-pro {
   font-size: 20px;
   font-weight: 700;
