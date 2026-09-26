@@ -1773,7 +1773,8 @@ header.is-hidden {
 .top-sastainabilityList {
   display: flex;
   flex-direction: column;
-  gap: var(--sastain-gap);
+  align-self: flex-start;
+  height: max-content;
 }
 
 .top-sastainabilityList.is-ready {
@@ -1786,6 +1787,7 @@ header.is-hidden {
 
 .top-sastainabilityList__item {
   flex-shrink: 0;
+  margin-bottom: var(--sastain-gap);
 }
 
 .top-sastainabilityList__img {
@@ -1914,13 +1916,13 @@ header.is-hidden {
     transform: translateY(0);
   }
   to {
-    transform: translateY(calc(-1 * var(--marquee-distance)));
+    transform: translateY(-50%);
   }
 }
 
 @keyframes sastain-marquee-down {
   from {
-    transform: translateY(calc(-1 * var(--marquee-distance)));
+    transform: translateY(-50%);
   }
   to {
     transform: translateY(0);
