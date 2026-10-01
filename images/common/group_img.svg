@@ -1,4 +1,4 @@
-<svg width="589" height="635" viewBox="0 0 589 635" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="589" height="635" viewBox="-5 -5 596 642" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style type="text/css">
 .bg-circle{transform-origin:294.856px 309.989px;animation:bgIn .9s cubic-bezier(.22,.8,.3,1) both}
 @keyframes bgIn{from{opacity:0;transform:scale(.4)}to{opacity:.2;transform:scale(1)}}

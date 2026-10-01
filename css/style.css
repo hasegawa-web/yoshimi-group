@@ -593,6 +593,11 @@ header.is-hidden {
   max-width: 40vw;
 }
 
+.top-about__img.is-restarting {
+  animation: none !important;
+  opacity: 0 !important;
+}
+
 .is-inview .top-about__img {
   animation-name: top-reveal-right;
 }

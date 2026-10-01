@@ -4,7 +4,22 @@
   );
   if (!sections.length) return;
 
-  const reveal = (el) => el.classList.add("is-inview");
+  const restartGroupImg = (section) => {
+    section.querySelectorAll("img.top-about__img").forEach((img) => {
+      const src = img.getAttribute("src");
+      if (!src || src.includes("play=1")) return;
+      const next = `${src.split("?")[0]}?play=1`;
+      img.classList.add("is-restarting");
+      const show = () => img.classList.remove("is-restarting");
+      img.addEventListener("load", show, { once: true });
+      img.src = next;
+    });
+  };
+
+  const reveal = (el) => {
+    if (el.classList.contains("top-about")) restartGroupImg(el);
+    el.classList.add("is-inview");
+  };
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     sections.forEach(reveal);
