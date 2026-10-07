@@ -772,6 +772,7 @@ header.is-hidden {
 .top-about {
   padding-bottom: 100px;
   position: relative;
+  z-index: 2;
 }
 
 .top-about__inner {
